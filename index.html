@@ -1,91 +1,130 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio - Hafid Idrissi</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hafid Idrissi — DevOps & Full-Stack Engineer</title>
+  <meta name="description" content="Portfolio de Hafid Idrissi (DevOps & Full-Stack). Projets: DetectIA (SaaS), Finger Chooser (Android). CV téléchargeable.">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root { --bg:#0b1220; --card:#121a2b; --text:#e8eefc; --muted:#a9b4d0; --accent:#7c3aed; --accent2:#22c55e; }
+    *{box-sizing:border-box} html,body{margin:0;background:linear-gradient(180deg,#0b1220,#10172a);color:var(--text);font-family:Inter,system-ui,Segoe UI,Roboto,sans-serif}
+    a{color:#a78bfa;text-decoration:none}
+    .wrap{max-width:1100px;margin:auto;padding:32px 18px}
+    header{display:grid;gap:8px;margin:6px 0 22px}
+    header h1{font-size:32px; margin:0}
+    header p{margin:0;color:var(--muted)}
+    .actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:8px}
+    .btn{display:inline-block;padding:10px 14px;border-radius:10px;font-weight:600;border:1px solid #344166;background:#1b2340;color:#e6eaff}
+    .btn.primary{background:var(--accent);border-color:transparent}
+    .btn.green{background:var(--accent2);color:#0b1220;border-color:transparent}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px;margin-top:18px}
+    .card{background:var(--card);border:1px solid #1f2940;border-radius:16px;padding:18px}
+    .pill{display:inline-block;font-size:12px;color:#c3ccf1;background:#1b2340;padding:6px 10px;border-radius:999px;margin-bottom:10px}
+    .card h3{margin:6px 0 6px}
+    .card p{margin:0 0 10px;color:var(--muted)}
+    .card .stack{font-size:12px;color:#c9d3f9}
+    .links{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+    .section{margin-top:28px}
+    .list{display:grid;gap:10px}
+    .xp{background:#10182c;border:1px solid #223052;border-radius:14px;padding:14px}
+    .xp h4{margin:0 0 6px}
+    footer{margin:28px 0 0;color:var(--muted);font-size:14px;text-align:center}
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Person",
+    "name":"Hafid Idrissi",
+    "jobTitle":"DevOps & Full-Stack Engineer",
+    "email":"mailto:idrissihafez@gmail.com",
+    "url":"https://hafididrissi.github.io",
+    "sameAs":["https://github.com/HafidIdrissi"]
+  }
+  </script>
 </head>
 <body>
-  <!-- HEADER -->
-  <header>
-    <img src="assets/img/logo.png" alt="Hafid Idrissi Logo" class="profile-logo">
-    <h1>👋 Hi, I'm Hafid Idrissi</h1>
-    <p>Cloud & DevOps Engineer · Software Developer · AI Enthusiast</p>
-    <a class="btn" href="assets/pdf/Hafid_Idrissi_CV.pdf" target="_blank">📄 Download my CV</a>
-  </header>
+  <div class="wrap">
+    <header>
+      <h1>Hafid Idrissi</h1>
+      <p>DevOps & Full-Stack — .NET · TypeScript · React/React Native · Azure · Kubernetes · Terraform</p>
+      <div class="actions">
+        <!-- Mettez votre PDF dans /cv/Hafid_IDRISSI_CV.pdf -->
+        <a class="btn green" href="cv/Hafid_IDRISSI_CV.pdf" download>⬇︎ Télécharger le CV (PDF)</a>
+        <a class="btn primary" href="mailto:idrissihafez@gmail.com">✉️ Me contacter</a>
+        <a class="btn" href="https://github.com/HafidIdrissi" target="_blank" rel="noopener">GitHub</a>
+        <!-- Ajoutez votre LinkedIn si vous voulez -->
+        <!-- <a class="btn" href="https://linkedin.com/in/xxxx" target="_blank" rel="noopener">LinkedIn</a> -->
+      </div>
+    </header>
 
-  <!-- NAVBAR -->
-  <nav>
-    <a href="#about">About</a>
-    <a href="#projects">Projects</a>
-    <a href="#tech">Tech Stack</a>
-    <a href="#contact">Contact</a>
-  </nav>
+    <!-- PROJETS -->
+    <section class="section">
+      <h2>Projets en avant</h2>
+      <div class="grid">
 
-  <!-- ABOUT -->
-  <section id="about">
-    <h2>🚀 About Me</h2>
-    <p>
-      I am an engineer specialized in Cloud, DevOps, and AI. 
-      I have hands-on experience with .NET, Python, Kubernetes, Terraform, and embedded systems. 
-      Passionate about building scalable solutions and experimenting with AI applications.
-    </p>
-  </section>
+        <!-- DetectIA -->
+        <article class="card">
+          <span class="pill">SaaS — Web</span>
+          <h3>DetectIA — Détection de texte généré par IA</h3>
+          <p>App web avec authentification, base Postgres sécurisée (RLS), paiements récurrents Stripe, et fonctions serverless.</p>
+          <p class="stack">React + Vite · Tailwind · Supabase (Auth + PostgreSQL RLS) · Netlify Functions (Node.js) · Stripe Checkout + Webhooks · CI/CD Netlify</p>
+          <div class="links">
+            <a class="btn primary" href="https://clinquant-paletas-1aee15.netlify.app/" target="_blank" rel="noopener">🔗 Live demo</a>
+            <!-- Le repo peut être privé : laissez ce lien s'il devient public -->
+            <!-- <a class="btn" href="https://github.com/HafidIdrissi/detectia-app" target="_blank" rel="noopener">Code</a> -->
+          </div>
+        </article>
 
-<section id="projects">
-  <h2>⭐ Projects</h2>
-  <div class="projects">
-    <div class="card">
-      <img src="assets/img/drone.jpg" alt="Quadrotor Supervisor" class="project-img">
-      <h3>Quadrotor Supervisor</h3>
-      <p>Drone project with Arduino, Python and 3D printing. Focus on control & automation.</p>
-    </div>
-    <div class="card">
-      <img src="assets/img/kubernetes.png" alt="Hager AKS POC" class="project-img">
-      <h3>Cloud Microservices POC</h3>
-      <p>Designed and deployed a secure microservices platform on Azure AKS with Terraform, Azure DevOps pipelines, and integrated services (SQL DB, Key Vault, Service Bus).</p>
-    </div>
-    <div class="card">
-      <img src="assets/img/faceid.png" alt="SmartDoor FaceID" class="project-img">
-      <h3>SmartDoor FaceID</h3>
-      <p>Edge AI project with Raspberry Pi, OpenCV and MQTT for secure door access.</p>
-    </div>
-    <div class="card">
-      <img src="assets/img/rviz.png" alt="Mirion IHM" class="project-img">
-      <h3>Industrial IHM</h3>
-      <p>GUI developed for embedded nuclear sensors. Expertise in C++/C, Python and ROS environments.</p>
-    </div>
+        <!-- Finger Chooser -->
+        <article class="card">
+          <span class="pill">Mobile — Android</span>
+          <h3>Finger Chooser — Sélection aléatoire multi-touch</h3>
+          <p>Application mobile Expo/React Native. Détecte plusieurs doigts, choisit un gagnant aléatoire, animations + haptique.</p>
+          <p class="stack">React Native + Expo · Reanimated · Expo Haptics · EAS Build (APK/AAB)</p>
+          <div class="links">
+            <a class="btn primary" href="https://expo.dev/accounts/hafez_id/projects/finger-chooser/builds/68b5f23e-f773-4e88-9c2a-beef882d4417" target="_blank" rel="noopener">⬇︎ Télécharger APK (Expo)</a>
+            <a class="btn" href="https://github.com/HafidIdrissi/finger-chooser" target="_blank" rel="noopener">README / Présentation</a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- EXPÉRIENCES -->
+    <section class="section">
+      <h2>Expériences récentes</h2>
+      <div class="list">
+        <div class="xp">
+          <h4>Ingénieur Architecture Cloud & IoT — Hager Group (04/2024 → 10/2024)</h4>
+          <ul>
+            <li>Microservices .NET/C# sur Azure AKS (Kubernetes) · CI/CD</li>
+            <li>Infra as Code avec Terraform · monitoring & fiabilisation</li>
+          </ul>
+        </div>
+        <div class="xp">
+          <h4>Développeur Systèmes Embarqués & UI — Mirion Technologies (05/2023 → 09/2023)</h4>
+          <ul>
+            <li>UI sur Raspberry Pi (Linux) en C++/Python · intégration capteurs</li>
+            <li>Affichage temps réel, tests, doc technique</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMPÉTENCES -->
+    <section class="section">
+      <h2>Compétences clés</h2>
+      <div class="grid">
+        <div class="card"><h3>Backend & Cloud</h3><p>.NET/C#, Node.js, REST APIs, Azure, AWS, Docker, Kubernetes, Terraform</p></div>
+        <div class="card"><h3>Frontend & Mobile</h3><p>React, Next.js, TailwindCSS, React Native/Expo, Reanimated</p></div>
+        <div class="card"><h3>Données & Outils</h3><p>PostgreSQL, Supabase (Auth/RLS), SQL Server, CI/CD, GitHub Actions</p></div>
+      </div>
+    </section>
+
+    <footer>
+      © <script>document.write(new Date().getFullYear())</script> — Hafid Idrissi · Jouy-en-Josas · <a href="mailto:idrissihafez@gmail.com">idrissihafez@gmail.com</a>
+    </footer>
   </div>
-</section>
-
-
-  <!-- TECH STACK -->
-<section id="tech">
-  <h2>🧰 Tech Stack</h2>
-  <div class="tech-list">
-    <div class="tech-item"><b>Languages:</b> C#, Python, Java, C/C++, SQL</div>
-    <div class="tech-item"><b>Web & App:</b> .NET, React, FastAPI, REST/GraphQL</div>
-    <div class="tech-item"><b>Cloud:</b> Azure (AKS, Key Vault, Service Bus), Docker, Kubernetes</div>
-    <div class="tech-item"><b>Infra:</b> Terraform, Helm</div>
-    <div class="tech-item"><b>AI/ML:</b> PyTorch, OpenCV</div>
-    <div class="tech-item"><b>CI/CD:</b> GitHub Actions, Azure DevOps</div>
-  </div>
-</section>
-
-
-  <!-- CONTACT -->
-<section id="contact">
-  <h2>📫 Contact</h2>
-  <p>📧 Email: <a href="mailto:idrissihafez@gmail.com">idrissihafez@gmail.com</a></p>
-  <p>💼 LinkedIn: <a href="https://www.linkedin.com/in/hafid-idrissi" target="_blank">hafid-idrissi</a></p>
-  <p>🐙 GitHub: <a href="https://github.com/HafidIdrissi" target="_blank">HafidIdrissi</a></p>
-</section>
-
-
-  <!-- FOOTER -->
-  <footer>
-    <p>© 2025 Hafid Idrissi. Built with ❤️ and GitHub Pages.</p>
-  </footer>
 </body>
 </html>
