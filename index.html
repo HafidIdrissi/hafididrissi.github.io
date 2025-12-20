@@ -1,135 +1,862 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Hafid Idrissi — DevOps & Full-Stack Engineer</title>
-  <meta name="description" content="Portfolio de Hafid Idrissi (DevOps & Full-Stack). Projets: DetectIA (SaaS), Finger Chooser (Android). CV téléchargeable.">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-  <style>
-    :root { --bg:#0b1220; --card:#121a2b; --text:#e8eefc; --muted:#a9b4d0; --accent:#7c3aed; --accent2:#22c55e; }
-    *{box-sizing:border-box} html,body{margin:0;background:linear-gradient(180deg,#0b1220,#10172a);color:var(--text);font-family:Inter,system-ui,Segoe UI,Roboto,sans-serif}
-    a{color:#a78bfa;text-decoration:none}
-    .wrap{max-width:1100px;margin:auto;padding:32px 18px}
-    header{display:grid;gap:8px;margin:6px 0 22px}
-    header h1{font-size:32px; margin:0}
-    header p{margin:0;color:var(--muted)}
-    .actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:8px}
-    .btn{display:inline-block;padding:10px 14px;border-radius:10px;font-weight:600;border:1px solid #344166;background:#1b2340;color:#e6eaff}
-    .btn.primary{background:var(--accent);border-color:transparent}
-    .btn.green{background:var(--accent2);color:#0b1220;border-color:transparent}
-    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px;margin-top:18px}
-    .card{background:var(--card);border:1px solid #1f2940;border-radius:16px;padding:18px}
-    .pill{display:inline-block;font-size:12px;color:#c3ccf1;background:#1b2340;padding:6px 10px;border-radius:999px;margin-bottom:10px}
-    .card h3{margin:6px 0 6px}
-    .card p{margin:0 0 10px;color:var(--muted)}
-    .card .stack{font-size:12px;color:#c9d3f9}
-    .links{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
-    .section{margin-top:28px}
-    .list{display:grid;gap:10px}
-    .xp{background:#10182c;border:1px solid #223052;border-radius:14px;padding:14px}
-    .xp h4{margin:0 0 6px}
-    footer{margin:28px 0 0;color:var(--muted);font-size:14px;text-align:center}
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hafid Idrissi — Full-Stack Engineer & Cloud Architect</title>
+  <meta name="description" content="Full-Stack Engineer specializing in cloud architecture, DevOps, and modern web applications. Building scalable solutions with .NET, React, Azure, and Kubernetes.">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Hafid Idrissi — Full-Stack Engineer">
+  <meta property="og:description" content="Building scalable cloud solutions and modern web applications">
+  <meta property="og:type" content="website">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Schema.org -->
   <script type="application/ld+json">
   {
-    "@context":"https://schema.org",
-    "@type":"Person",
-    "name":"Hafid Idrissi",
-    "jobTitle":"DevOps & Full-Stack Engineer",
-    "email":"mailto:idrissihafez@gmail.com",
-    "url":"https://hafididrissi.github.io",
-    "sameAs":["https://github.com/HafidIdrissi"]
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Hafid Idrissi",
+    "jobTitle": "Full-Stack Engineer & Cloud Architect",
+    "email": "idrissihafez@gmail.com",
+    "url": "https://hafididrissi.github.io",
+    "sameAs": [
+      "https://github.com/HafidIdrissi",
+      "https://www.linkedin.com/in/hafid-idrissi/"
+    ]
   }
   </script>
+  
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    :root {
+      --bg-primary: #0a0e1a;
+      --bg-secondary: #0f1419;
+      --bg-card: #1a1f2e;
+      --text-primary: #e6edf3;
+      --text-secondary: #8b949e;
+      --accent: #7c3aed;
+      --accent-hover: #6d28d9;
+      --accent-green: #22c55e;
+      --border: #30363d;
+      --glow: rgba(124, 58, 237, 0.3);
+    }
+    
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+      color: var(--text-primary);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+    
+    /* Animated background */
+    .bg-animation {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      opacity: 0.15;
+    }
+    
+    .bg-animation::before,
+    .bg-animation::after {
+      content: '';
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(80px);
+      animation: float 8s ease-in-out infinite;
+    }
+    
+    .bg-animation::before {
+      width: 500px;
+      height: 500px;
+      background: var(--accent);
+      top: -10%;
+      right: -10%;
+      animation-delay: 0s;
+    }
+    
+    .bg-animation::after {
+      width: 400px;
+      height: 400px;
+      background: var(--accent-green);
+      bottom: -10%;
+      left: -10%;
+      animation-delay: 4s;
+    }
+    
+    @keyframes float {
+      0%, 100% { transform: translate(0, 0); }
+      50% { transform: translate(50px, 50px); }
+    }
+    
+    /* Container */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    
+    /* Header */
+    header {
+      padding: 80px 0 120px;
+      text-align: center;
+      position: relative;
+    }
+    
+    .hero-content h1 {
+      font-size: clamp(2.5rem, 6vw, 4rem);
+      font-weight: 800;
+      margin-bottom: 16px;
+      background: linear-gradient(135deg, var(--text-primary), var(--accent));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: fadeInUp 0.8s ease-out;
+    }
+    
+    .hero-content .tagline {
+      font-size: clamp(1.1rem, 2vw, 1.4rem);
+      color: var(--text-secondary);
+      margin-bottom: 12px;
+      animation: fadeInUp 0.8s ease-out 0.2s both;
+    }
+    
+    .hero-content .subtitle {
+      font-size: clamp(0.95rem, 1.5vw, 1.1rem);
+      color: var(--text-secondary);
+      max-width: 700px;
+      margin: 0 auto 32px;
+      animation: fadeInUp 0.8s ease-out 0.4s both;
+    }
+    
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    /* Buttons */
+    .cta-buttons {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+      animation: fadeInUp 0.8s ease-out 0.6s both;
+    }
+    
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 28px;
+      font-size: 16px;
+      font-weight: 600;
+      border-radius: 12px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      border: 2px solid transparent;
+    }
+    
+    .btn-primary {
+      background: var(--accent);
+      color: white;
+      box-shadow: 0 8px 24px var(--glow);
+    }
+    
+    .btn-primary:hover {
+      background: var(--accent-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 12px 32px var(--glow);
+    }
+    
+    .btn-secondary {
+      background: var(--bg-card);
+      color: var(--text-primary);
+      border-color: var(--border);
+    }
+    
+    .btn-secondary:hover {
+      border-color: var(--accent);
+      transform: translateY(-2px);
+    }
+    
+    /* Stats */
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 24px;
+      margin: 60px 0;
+      animation: fadeInUp 0.8s ease-out 0.8s both;
+    }
+    
+    .stat-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 24px;
+      text-align: center;
+      transition: transform 0.3s ease, border-color 0.3s ease;
+    }
+    
+    .stat-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--accent);
+    }
+    
+    .stat-number {
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: var(--accent);
+      margin-bottom: 8px;
+    }
+    
+    .stat-label {
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+    }
+    
+    /* Section */
+    section {
+      padding: 80px 0;
+    }
+    
+    .section-header {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+    
+    .section-header h2 {
+      font-size: clamp(2rem, 4vw, 2.5rem);
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+    
+    .section-header p {
+      color: var(--text-secondary);
+      font-size: 1.1rem;
+    }
+    
+    /* Projects Grid */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 32px;
+    }
+    
+    .project-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 32px;
+      transition: all 0.4s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .project-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, var(--accent) 0%, var(--accent-green) 100%);
+      opacity: 0;
+      transition: opacity 0.4s ease;
+      z-index: 0;
+    }
+    
+    .project-card:hover::before {
+      opacity: 0.05;
+    }
+    
+    .project-card:hover {
+      transform: translateY(-8px);
+      border-color: var(--accent);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    }
+    
+    .project-card > * {
+      position: relative;
+      z-index: 1;
+    }
+    
+    .project-badge {
+      display: inline-block;
+      padding: 6px 14px;
+      background: rgba(124, 58, 237, 0.15);
+      color: var(--accent);
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 16px;
+    }
+    
+    .project-card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 12px;
+      color: var(--text-primary);
+    }
+    
+    .project-card p {
+      color: var(--text-secondary);
+      margin-bottom: 20px;
+      line-height: 1.6;
+    }
+    
+    .tech-stack {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 20px;
+    }
+    
+    .tech-tag {
+      padding: 4px 12px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      font-size: 0.8rem;
+      color: var(--text-secondary);
+    }
+    
+    .project-links {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    
+    .link-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 10px 18px;
+      background: rgba(124, 58, 237, 0.1);
+      color: var(--accent);
+      border: 1px solid var(--accent);
+      border-radius: 10px;
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+    
+    .link-btn:hover {
+      background: var(--accent);
+      color: white;
+      transform: translateY(-2px);
+    }
+    
+    /* Skills */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+    }
+    
+    .skill-category {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 28px;
+      transition: all 0.3s ease;
+    }
+    
+    .skill-category:hover {
+      border-color: var(--accent);
+      transform: translateY(-4px);
+    }
+    
+    .skill-category h3 {
+      font-size: 1.3rem;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    
+    .skill-icon {
+      font-size: 1.8rem;
+    }
+    
+    .skill-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    
+    .skill-item {
+      padding: 8px 16px;
+      background: rgba(124, 58, 237, 0.1);
+      border-radius: 10px;
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+    }
+    
+    /* Experience Timeline */
+    .timeline {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    
+    .timeline-item {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 32px;
+      margin-bottom: 24px;
+      position: relative;
+      transition: all 0.3s ease;
+    }
+    
+    .timeline-item:hover {
+      border-color: var(--accent);
+      transform: translateX(8px);
+    }
+    
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -12px;
+      top: 32px;
+      width: 8px;
+      height: 8px;
+      background: var(--accent);
+      border-radius: 50%;
+      box-shadow: 0 0 12px var(--glow);
+    }
+    
+    .timeline-header {
+      margin-bottom: 16px;
+    }
+    
+    .timeline-header h3 {
+      font-size: 1.4rem;
+      margin-bottom: 8px;
+    }
+    
+    .timeline-meta {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+    }
+    
+    .timeline-item ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    
+    .timeline-item li {
+      padding-left: 24px;
+      margin-bottom: 8px;
+      position: relative;
+      color: var(--text-secondary);
+    }
+    
+    .timeline-item li::before {
+      content: '→';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+    }
+    
+    /* Contact */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 24px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    
+    .contact-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 28px;
+      text-align: center;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      color: var(--text-primary);
+    }
+    
+    .contact-card:hover {
+      border-color: var(--accent);
+      transform: translateY(-4px);
+    }
+    
+    .contact-icon {
+      font-size: 2.5rem;
+      margin-bottom: 12px;
+      display: block;
+    }
+    
+    .contact-card h3 {
+      font-size: 1.2rem;
+      margin-bottom: 8px;
+    }
+    
+    .contact-card p {
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+    }
+    
+    /* Footer */
+    footer {
+      background: var(--bg-secondary);
+      border-top: 1px solid var(--border);
+      padding: 40px 0;
+      text-align: center;
+      color: var(--text-secondary);
+    }
+    
+    footer p {
+      margin-bottom: 16px;
+    }
+    
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+    }
+    
+    .social-link {
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-size: 1.2rem;
+      transition: all 0.3s ease;
+    }
+    
+    .social-link:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+      transform: translateY(-2px);
+    }
+    
+    /* Responsive */
+    @media (max-width: 768px) {
+      header {
+        padding: 60px 0 80px;
+      }
+      
+      section {
+        padding: 60px 0;
+      }
+      
+      .projects-grid,
+      .skills-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .timeline-item {
+        padding: 24px;
+      }
+      
+      .timeline-item::before {
+        display: none;
+      }
+      
+      .timeline-item:hover {
+        transform: translateX(0);
+      }
+    }
+  </style>
 </head>
 <body>
-  <div class="wrap">
-    <header>
-      <h1>Hafid Idrissi</h1>
-      <p>DevOps & Full-Stack — .NET · TypeScript · React/React Native · Azure · Kubernetes · Terraform</p>
-      <div class="actions">
-        <!-- Mettez votre PDF dans /cv/Hafid_IDRISSI_CV.pdf -->
-<!-- Voir en ligne -->
-<a class="btn green" href="/assets/pdf/Hafid_Idrissi_CV.pdf?v=3" target="_blank" rel="noopener">
-  ⬇︎ Télécharger le CV (PDF)
-</a>
-
-
-        <a class="btn primary" href="mailto:idrissihafez@gmail.com">✉️ Me contacter</a>
-        <a class="btn" href="https://github.com/HafidIdrissi" target="_blank" rel="noopener">GitHub</a>
-        <!-- Ajoutez votre LinkedIn si vous voulez -->
-        <!-- <a class="btn" href="https://linkedin.com/in/xxxx" target="_blank" rel="noopener">LinkedIn</a> -->
+  <div class="bg-animation"></div>
+  
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <div class="hero-content">
+        <h1>Hafid Idrissi</h1>
+        <p class="tagline">Full-Stack Engineer & Cloud Architect</p>
+        <p class="subtitle">I build production-ready systems that scale — from pixel-perfect UIs to cloud-native architectures. Specialized in .NET, React, Azure, and DevOps excellence.</p>
+        
+        <div class="cta-buttons">
+          <a href="mailto:idrissihafez@gmail.com" class="btn btn-primary">
+            📧 Let's Talk
+          </a>
+          <a href="/assets/pdf/Hafid_Idrissi_CV.pdf" target="_blank" class="btn btn-secondary">
+            📄 Download CV
+          </a>
+          <a href="https://github.com/HafidIdrissi" target="_blank" class="btn btn-secondary">
+            💻 GitHub
+          </a>
+          <a href="https://www.linkedin.com/in/hafid-idrissi/" target="_blank" class="btn btn-secondary">
+            💼 LinkedIn
+          </a>
+        </div>
       </div>
-    </header>
-
-    <!-- PROJETS -->
-    <section class="section">
-      <h2>Projets en avant</h2>
-      <div class="grid">
-
+      
+      <!-- Stats -->
+      <div class="stats">
+        <div class="stat-card">
+          <div class="stat-number">5+</div>
+          <div class="stat-label">Years Coding</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">10+</div>
+          <div class="stat-label">Projects Shipped</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">Cloud</div>
+          <div class="stat-label">Native Expert</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">100%</div>
+          <div class="stat-label">Committed</div>
+        </div>
+      </div>
+    </div>
+  </header>
+  
+  <!-- Featured Projects -->
+  <section id="projects">
+    <div class="container">
+      <div class="section-header">
+        <h2>🚀 Featured Projects</h2>
+        <p>Real products solving real problems</p>
+      </div>
+      
+      <div class="projects-grid">
+        <!-- GoEditPDF -->
+        <div class="project-card">
+          <span class="project-badge">🔥 Live SaaS</span>
+          <h3>GoEditPDF</h3>
+          <p>Free PDF editor with 100% client-side processing. No servers, maximum privacy. Features merge, split, rotate, e-signature, annotations, and OCR.</p>
+          <div class="tech-stack">
+            <span class="tech-tag">Vanilla JS</span>
+            <span class="tech-tag">PDF-Lib</span>
+            <span class="tech-tag">Fabric.js</span>
+            <span class="tech-tag">Tesseract.js</span>
+            <span class="tech-tag">Vercel</span>
+          </div>
+          <div class="project-links">
+            <a href="https://goeditpdf.com/" target="_blank" class="link-btn">🌐 Live Demo</a>
+          </div>
+        </div>
+        
         <!-- DetectIA -->
-        <article class="card">
-          <span class="pill">SaaS — Web</span>
-          <h3>DetectIA — Détection de texte généré par IA</h3>
-          <p>App web avec authentification, base Postgres sécurisée (RLS), paiements récurrents Stripe, et fonctions serverless.</p>
-          <p class="stack">React + Vite · Tailwind · Supabase (Auth + PostgreSQL RLS) · Netlify Functions (Node.js) · Stripe Checkout + Webhooks · CI/CD Netlify</p>
-          <div class="links">
-            <a class="btn primary" href="https://clinquant-paletas-1aee15.netlify.app/" target="_blank" rel="noopener">🔗 Live demo</a>
-            <!-- Le repo peut être privé : laissez ce lien s'il devient public -->
-            <!-- <a class="btn" href="https://github.com/HafidIdrissi/detectia-app" target="_blank" rel="noopener">Code</a> -->
+        <div class="project-card">
+          <span class="project-badge">💎 SaaS Platform</span>
+          <h3>DetectIA</h3>
+          <p>AI content detection platform with enterprise-grade security. JWT authentication, row-level security, Stripe payments, and webhook automation.</p>
+          <div class="tech-stack">
+            <span class="tech-tag">Next.js</span>
+            <span class="tech-tag">NestJS</span>
+            <span class="tech-tag">Supabase</span>
+            <span class="tech-tag">Stripe</span>
+            <span class="tech-tag">PostgreSQL</span>
           </div>
-        </article>
-
+          <div class="project-links">
+            <a href="https://checkai-app.com/" target="_blank" class="link-btn">🌐 Live Demo</a>
+          </div>
+        </div>
+        
         <!-- Finger Chooser -->
-        <article class="card">
-          <span class="pill">Mobile — Android</span>
-          <h3>Finger Chooser — Sélection aléatoire multi-touch</h3>
-          <p>Application mobile Expo/React Native. Détecte plusieurs doigts, choisit un gagnant aléatoire, animations + haptique.</p>
-          <p class="stack">React Native + Expo · Reanimated · Expo Haptics · EAS Build (APK/AAB)</p>
-          <div class="links">
-            <a class="btn primary" href="https://expo.dev/accounts/hafez_id/projects/finger-chooser/builds/68b5f23e-f773-4e88-9c2a-beef882d4417" target="_blank" rel="noopener">⬇︎ Télécharger APK (Expo)</a>
-            <a class="btn" href="https://github.com/HafidIdrissi/finger-chooser" target="_blank" rel="noopener">README / Présentation</a>
+        <div class="project-card">
+          <span class="project-badge">📱 Mobile App</span>
+          <h3>Finger Chooser</h3>
+          <p>Real-time multi-touch detection app without computer vision. Simultaneous touch tracking with GPU animations and haptic feedback.</p>
+          <div class="tech-stack">
+            <span class="tech-tag">React Native</span>
+            <span class="tech-tag">Expo</span>
+            <span class="tech-tag">Reanimated</span>
+            <span class="tech-tag">TypeScript</span>
           </div>
-        </article>
-
+          <div class="project-links">
+            <a href="https://expo.dev/accounts/hafez_id/projects/finger-chooser/builds/68b5f23e-f773-4e88-9c2a-beef882d4417" target="_blank" class="link-btn">📥 Download APK</a>
+            <a href="https://github.com/HafidIdrissi/finger-chooser" target="_blank" class="link-btn">💻 Code</a>
+          </div>
+        </div>
+        
+        <!-- Cloud Microservices -->
+        <div class="project-card">
+          <span class="project-badge">☁️ Enterprise</span>
+          <h3>Cloud Microservices Platform</h3>
+          <p>Production-ready containerized architecture on Azure. IaC approach with cost reduction and scalable infrastructure for IoT platform.</p>
+          <div class="tech-stack">
+            <span class="tech-tag">Azure AKS</span>
+            <span class="tech-tag">Docker</span>
+            <span class="tech-tag">Terraform</span>
+            <span class="tech-tag">C#/.NET</span>
+            <span class="tech-tag">Azure DevOps</span>
+          </div>
+          <div class="project-links">
+            <span class="link-btn" style="opacity: 0.6; cursor: default; border-style: dashed;">🔒 Private</span>
+          </div>
+        </div>
       </div>
-    </section>
-
-    <!-- EXPÉRIENCES -->
-    <section class="section">
-      <h2>Expériences récentes</h2>
-      <div class="list">
-        <div class="xp">
-          <h4>Ingénieur Architecture Cloud & IoT — Hager Group (04/2024 → 10/2024)</h4>
+    </div>
+  </section>
+  
+  <!-- Skills -->
+  <section id="skills" style="background: var(--bg-secondary);">
+    <div class="container">
+      <div class="section-header">
+        <h2>💻 Technical Arsenal</h2>
+        <p>Technologies I use to build reliable systems</p>
+      </div>
+      
+      <div class="skills-grid">
+        <div class="skill-category">
+          <h3><span class="skill-icon">🎨</span> Frontend</h3>
+          <div class="skill-list">
+            <span class="skill-item">React</span>
+            <span class="skill-item">Next.js</span>
+            <span class="skill-item">TypeScript</span>
+            <span class="skill-item">React Native</span>
+            <span class="skill-item">Tailwind CSS</span>
+            <span class="skill-item">JavaScript</span>
+          </div>
+        </div>
+        
+        <div class="skill-category">
+          <h3><span class="skill-icon">⚙️</span> Backend</h3>
+          <div class="skill-list">
+            <span class="skill-item">.NET/C#</span>
+            <span class="skill-item">NestJS</span>
+            <span class="skill-item">FastAPI</span>
+            <span class="skill-item">Python</span>
+            <span class="skill-item">REST APIs</span>
+            <span class="skill-item">Microservices</span>
+          </div>
+        </div>
+        
+        <div class="skill-category">
+          <h3><span class="skill-icon">☁️</span> Cloud & DevOps</h3>
+          <div class="skill-list">
+            <span class="skill-item">Azure</span>
+            <span class="skill-item">AWS</span>
+            <span class="skill-item">Kubernetes</span>
+            <span class="skill-item">Docker</span>
+            <span class="skill-item">Terraform</span>
+            <span class="skill-item">CI/CD</span>
+          </div>
+        </div>
+        
+        <div class="skill-category">
+          <h3><span class="skill-icon">🗄️</span> Database & Tools</h3>
+          <div class="skill-list">
+            <span class="skill-item">PostgreSQL</span>
+            <span class="skill-item">Supabase</span>
+            <span class="skill-item">Azure SQL</span>
+            <span class="skill-item">Redis</span>
+            <span class="skill-item">Git</span>
+            <span class="skill-item">Linux</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Experience -->
+  <section id="experience">
+    <div class="container">
+      <div class="section-header">
+        <h2>💼 Experience</h2>
+        <p>Building production systems and shipping features</p>
+      </div>
+      
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-header">
+            <h3>Cloud & IoT Architecture Engineer</h3>
+            <div class="timeline-meta">
+              <span>🏢 Hager Group</span>
+              <span>📍 Obernai, France</span>
+              <span>📅 Apr 2024 - Oct 2024</span>
+            </div>
+          </div>
           <ul>
-            <li>Microservices .NET/C# sur Azure AKS (Kubernetes) · CI/CD</li>
-            <li>Infra as Code avec Terraform · monitoring & fiabilisation</li>
+            <li>Designed and deployed containerized microservices platform on Azure Kubernetes Service (AKS)</li>
+            <li>Implemented Infrastructure as Code with Terraform and automated CI/CD pipelines</li>
+            <li>Reduced infrastructure costs through optimized architecture and resource management</li>
+            <li>Led architecture reviews focusing on scalability, IoT integration, and security</li>
           </ul>
         </div>
-        <div class="xp">
-          <h4>Développeur Systèmes Embarqués & UI — Mirion Technologies (05/2023 → 09/2023)</h4>
+        
+        <div class="timeline-item">
+          <div class="timeline-header">
+            <h3>Embedded Systems & UI Developer</h3>
+            <div class="timeline-meta">
+              <span>🏢 Mirion Technologies</span>
+              <span>📍 Saint-Paul-Trois-Châteaux</span>
+              <span>📅 Jun 2023 - Sep 2023</span>
+            </div>
+          </div>
           <ul>
-            <li>UI sur Raspberry Pi (Linux) en C++/Python · intégration capteurs</li>
-            <li>Affichage temps réel, tests, doc technique</li>
+            <li>Developed industrial HMI for nuclear environment with strict safety requirements</li>
+            <li>Integrated embedded systems with real-time data acquisition and visualization</li>
+            <li>Implemented ROS-based inter-module communication for reliable data flow</li>
+            <li>Conducted field tests and performance analysis with comprehensive technical documentation</li>
           </ul>
         </div>
       </div>
-    </section>
-
-    <!-- COMPÉTENCES -->
-    <section class="section">
-      <h2>Compétences clés</h2>
-      <div class="grid">
-        <div class="card"><h3>Backend & Cloud</h3><p>.NET/C#, Node.js, REST APIs, Azure, AWS, Docker, Kubernetes, Terraform</p></div>
-        <div class="card"><h3>Frontend & Mobile</h3><p>React, Next.js, TailwindCSS, React Native/Expo, Reanimated</p></div>
-        <div class="card"><h3>Données & Outils</h3><p>PostgreSQL, Supabase (Auth/RLS), SQL Server, CI/CD, GitHub Actions</p></div>
+    </div>
+  </section>
+  
+  <!-- Contact -->
+  <section id="contact" style="background: var(--bg-secondary);">
+    <div class="container">
+      <div class="section-header">
+        <h2>📬 Let's Connect</h2>
+        <p>Open to exciting opportunities and collaborations</p>
       </div>
-    </section>
-
-    <footer>
-      © <script>document.write(new Date().getFullYear())</script> — Hafid Idrissi · Jouy-en-Josas · <a href="mailto:idrissihafez@gmail.com">idrissihafez@gmail.com</a>
-    </footer>
-  </div>
-</body>
-</html>
+      
+      <div class="contact-grid">
+        <a href="mailto:idrissihafez@gmail.com" class="contact-card">
+          <span class="contact-icon">📧</span>
+          <h3>Email</h3>
+          <p>idrissihafez@gmail.com</p>
+        </a>
+        
+        <a href="https://www.linkedin.com/in/hafid-idrissi/" target="_blank" class="contact-card">
+          <span class="contact-icon">💼</span>
+          <h3>LinkedIn</h3>
+          <p>Connect professionally</p>
+        </a>
+        
+        <a href="https://github.com/HafidIdrissi" target="_blank" class="contact-card">
+          <span class="contact-icon">💻</span>
+          <h3>GitHub</h3>
+          <p>Check out my code</p>
+        </a>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>© 2025 Hafid Idrissi · Paris, France 🇫🇷
