@@ -565,14 +565,53 @@
       gap: 6px;
     }
     .tech-tag {
-      padding: 3px 10px;
-      background: rgba(255,255,255,0.05);
-      border: 1px solid var(--border);
-      border-radius: 6px;
+      padding: 4px 11px;
+      border-radius: 7px;
       font-size: 0.75rem;
-      color: var(--text-muted);
+      font-weight: 600;
       font-family: 'JetBrains Mono', monospace;
+      border: 1px solid transparent;
+      transition: transform 0.15s, box-shadow 0.15s;
     }
+    .tech-tag:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+    /* Tech-specific colors */
+    .tech-react     { background: rgba(97,218,251,0.12); color: #61dafb; border-color: rgba(97,218,251,0.3); }
+    .tech-nextjs    { background: rgba(255,255,255,0.08); color: #e2e8f0; border-color: rgba(255,255,255,0.2); }
+    .tech-ts        { background: rgba(49,120,198,0.15); color: #5ba0e0; border-color: rgba(49,120,198,0.35); }
+    .tech-js        { background: rgba(247,223,30,0.12); color: #f7df1e; border-color: rgba(247,223,30,0.3); }
+    .tech-rn        { background: rgba(97,218,251,0.10); color: #61dafb; border-color: rgba(97,218,251,0.25); }
+    .tech-tailwind  { background: rgba(56,189,248,0.12); color: #38bdf8; border-color: rgba(56,189,248,0.3); }
+    .tech-vite      { background: rgba(189,52,254,0.12); color: #bd34fe; border-color: rgba(189,52,254,0.3); }
+    .tech-dotnet    { background: rgba(104,33,122,0.20); color: #c084fc; border-color: rgba(168,85,247,0.35); }
+    .tech-nestjs    { background: rgba(224,0,56,0.12); color: #f9748f; border-color: rgba(224,0,56,0.3); }
+    .tech-fastapi   { background: rgba(5,201,152,0.12); color: #05c998; border-color: rgba(5,201,152,0.3); }
+    .tech-python    { background: rgba(55,118,171,0.15); color: #4b8bbe; border-color: rgba(55,118,171,0.35); }
+    .tech-azure     { background: rgba(0,127,255,0.12); color: #5ea6f5; border-color: rgba(0,127,255,0.3); }
+    .tech-aws       { background: rgba(255,153,0,0.12); color: #ff9900; border-color: rgba(255,153,0,0.3); }
+    .tech-k8s       { background: rgba(50,108,229,0.12); color: #3b82f6; border-color: rgba(50,108,229,0.3); }
+    .tech-docker    { background: rgba(29,99,237,0.12); color: #2496ed; border-color: rgba(29,99,237,0.3); }
+    .tech-terraform { background: rgba(94,53,177,0.15); color: #a78bfa; border-color: rgba(94,53,177,0.35); }
+    .tech-cicd      { background: rgba(34,197,94,0.12); color: #4ade80; border-color: rgba(34,197,94,0.3); }
+    .tech-postgres  { background: rgba(51,103,145,0.15); color: #5b9ec9; border-color: rgba(51,103,145,0.35); }
+    .tech-supabase  { background: rgba(62,207,142,0.12); color: #3ecf8e; border-color: rgba(62,207,142,0.3); }
+    .tech-redis     { background: rgba(220,50,47,0.12); color: #ff6b6b; border-color: rgba(220,50,47,0.3); }
+    .tech-git       { background: rgba(240,80,50,0.12); color: #f97316; border-color: rgba(240,80,50,0.3); }
+    .tech-linux     { background: rgba(253,204,13,0.12); color: #fcd34d; border-color: rgba(253,204,13,0.3); }
+    .tech-vanilla   { background: rgba(247,223,30,0.10); color: #f0c040; border-color: rgba(247,223,30,0.25); }
+    .tech-pdflib    { background: rgba(220,38,38,0.12); color: #f87171; border-color: rgba(220,38,38,0.3); }
+    .tech-fabric    { background: rgba(139,92,246,0.12); color: #a78bfa; border-color: rgba(139,92,246,0.3); }
+    .tech-tesseract { background: rgba(16,185,129,0.12); color: #34d399; border-color: rgba(16,185,129,0.3); }
+    .tech-vercel    { background: rgba(255,255,255,0.07); color: #e2e8f0; border-color: rgba(255,255,255,0.18); }
+    .tech-stripe    { background: rgba(99,91,255,0.12); color: #818cf8; border-color: rgba(99,91,255,0.3); }
+    .tech-expo      { background: rgba(0,0,0,0.25); color: #94a3b8; border-color: rgba(255,255,255,0.18); }
+    .tech-reanimated{ background: rgba(251,146,60,0.12); color: #fb923c; border-color: rgba(251,146,60,0.3); }
+    .tech-gemini    { background: rgba(66,133,244,0.12); color: #60a5fa; border-color: rgba(66,133,244,0.3); }
+    .tech-akdevops  { background: rgba(0,127,255,0.12); color: #5ea6f5; border-color: rgba(0,127,255,0.3); }
+    .tech-microservices { background: rgba(34,197,94,0.10); color: #4ade80; border-color: rgba(34,197,94,0.25); }
+    .tech-rest      { background: rgba(245,158,11,0.12); color: #fbbf24; border-color: rgba(245,158,11,0.3); }
     .project-links {
       display: flex;
       gap: 10px;
@@ -650,18 +689,16 @@
       gap: 7px;
     }
     .skill-tag {
-      padding: 5px 12px;
-      background: rgba(255,255,255,0.04);
-      border: 1px solid var(--border);
+      padding: 5px 13px;
       border-radius: 8px;
       font-size: 0.82rem;
-      color: var(--text-muted);
-      transition: all 0.15s;
+      font-weight: 600;
+      border: 1px solid transparent;
+      transition: transform 0.15s, box-shadow 0.15s;
     }
     .skill-tag:hover {
-      background: rgba(59,130,246,0.1);
-      border-color: rgba(59,130,246,0.3);
-      color: var(--text);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 14px rgba(0,0,0,0.35);
     }
 
     /* ─── EXPERIENCE ─── */
@@ -1113,11 +1150,11 @@
           <div class="project-name">LexiNegotiate</div>
           <p class="project-desc">AI-powered legal assistant democratizing contract protection for 800M freelancers worldwide. Instant risk analysis, financial impact calculator, and 3-tier negotiation strategies powered by Google Gemini.</p>
           <div class="tech-stack">
-            <span class="tech-tag">React</span>
-            <span class="tech-tag">TypeScript</span>
-            <span class="tech-tag">Gemini AI</span>
-            <span class="tech-tag">Tailwind</span>
-            <span class="tech-tag">Vite</span>
+            <span class="tech-tag tech-react">React</span>
+            <span class="tech-tag tech-ts">TypeScript</span>
+            <span class="tech-tag tech-gemini">Gemini AI</span>
+            <span class="tech-tag tech-tailwind">Tailwind</span>
+            <span class="tech-tag tech-vite">Vite</span>
           </div>
           <div class="project-links">
             <a href="https://www.youtube.com/watch?v=dinw3NJyobc" target="_blank" class="link-btn">▶ Video Demo</a>
@@ -1134,11 +1171,11 @@
           <div class="project-name">GoEditPDF</div>
           <p class="project-desc">Free PDF editor with 100% client-side processing. No servers, maximum privacy. Features merge, split, rotate, e-signature, annotations, and OCR.</p>
           <div class="tech-stack">
-            <span class="tech-tag">Vanilla JS</span>
-            <span class="tech-tag">PDF-Lib</span>
-            <span class="tech-tag">Fabric.js</span>
-            <span class="tech-tag">Tesseract.js</span>
-            <span class="tech-tag">Vercel</span>
+            <span class="tech-tag tech-vanilla">Vanilla JS</span>
+            <span class="tech-tag tech-pdflib">PDF-Lib</span>
+            <span class="tech-tag tech-fabric">Fabric.js</span>
+            <span class="tech-tag tech-tesseract">Tesseract.js</span>
+            <span class="tech-tag tech-vercel">Vercel</span>
           </div>
           <div class="project-links">
             <a href="https://goeditpdf.com/" target="_blank" class="link-btn">↗ Live Demo</a>
@@ -1154,11 +1191,11 @@
           <div class="project-name">checkai-app</div>
           <p class="project-desc">AI content detection platform with enterprise-grade security. JWT authentication, row-level security, Stripe payments, and webhook automation.</p>
           <div class="tech-stack">
-            <span class="tech-tag">Next.js</span>
-            <span class="tech-tag">NestJS</span>
-            <span class="tech-tag">Supabase</span>
-            <span class="tech-tag">Stripe</span>
-            <span class="tech-tag">PostgreSQL</span>
+            <span class="tech-tag tech-nextjs">Next.js</span>
+            <span class="tech-tag tech-nestjs">NestJS</span>
+            <span class="tech-tag tech-supabase">Supabase</span>
+            <span class="tech-tag tech-stripe">Stripe</span>
+            <span class="tech-tag tech-postgres">PostgreSQL</span>
           </div>
           <div class="project-links">
             <a href="https://checkai-app.com/" target="_blank" class="link-btn">↗ Live Demo</a>
@@ -1174,10 +1211,10 @@
           <div class="project-name">Finger Chooser</div>
           <p class="project-desc">Real-time multi-touch detection app without computer vision. Simultaneous touch tracking with GPU animations and haptic feedback.</p>
           <div class="tech-stack">
-            <span class="tech-tag">React Native</span>
-            <span class="tech-tag">Expo</span>
-            <span class="tech-tag">Reanimated</span>
-            <span class="tech-tag">TypeScript</span>
+            <span class="tech-tag tech-rn">React Native</span>
+            <span class="tech-tag tech-expo">Expo</span>
+            <span class="tech-tag tech-reanimated">Reanimated</span>
+            <span class="tech-tag tech-ts">TypeScript</span>
           </div>
           <div class="project-links">
             <a href="https://expo.dev/accounts/hafez_id/projects/finger-chooser/builds/68b5f23e-f773-4e88-9c2a-beef882d4417" target="_blank" class="link-btn">↓ APK</a>
@@ -1194,11 +1231,11 @@
           <div class="project-name">Cloud Microservices Platform</div>
           <p class="project-desc">Production-ready containerized architecture on Azure. IaC approach with significant cost reduction and scalable infrastructure for IoT platform.</p>
           <div class="tech-stack">
-            <span class="tech-tag">Azure AKS</span>
-            <span class="tech-tag">Docker</span>
-            <span class="tech-tag">Terraform</span>
-            <span class="tech-tag">C#/.NET</span>
-            <span class="tech-tag">Azure DevOps</span>
+            <span class="tech-tag tech-azure">Azure AKS</span>
+            <span class="tech-tag tech-docker">Docker</span>
+            <span class="tech-tag tech-terraform">Terraform</span>
+            <span class="tech-tag tech-dotnet">C#/.NET</span>
+            <span class="tech-tag tech-akdevops">Azure DevOps</span>
           </div>
           <div class="project-links">
             <a class="link-btn disabled">🔒 Private repo</a>
@@ -1225,12 +1262,12 @@
             <h3>Frontend</h3>
           </div>
           <div class="skill-tags">
-            <span class="skill-tag">React</span>
-            <span class="skill-tag">Next.js</span>
-            <span class="skill-tag">TypeScript</span>
-            <span class="skill-tag">React Native</span>
-            <span class="skill-tag">Tailwind CSS</span>
-            <span class="skill-tag">JavaScript</span>
+            <span class="skill-tag tech-react">React</span>
+            <span class="skill-tag tech-nextjs">Next.js</span>
+            <span class="skill-tag tech-ts">TypeScript</span>
+            <span class="skill-tag tech-rn">React Native</span>
+            <span class="skill-tag tech-tailwind">Tailwind CSS</span>
+            <span class="skill-tag tech-js">JavaScript</span>
           </div>
         </div>
 
@@ -1240,12 +1277,12 @@
             <h3>Backend</h3>
           </div>
           <div class="skill-tags">
-            <span class="skill-tag">.NET / C#</span>
-            <span class="skill-tag">NestJS</span>
-            <span class="skill-tag">FastAPI</span>
-            <span class="skill-tag">Python</span>
-            <span class="skill-tag">REST APIs</span>
-            <span class="skill-tag">Microservices</span>
+            <span class="skill-tag tech-dotnet">.NET / C#</span>
+            <span class="skill-tag tech-nestjs">NestJS</span>
+            <span class="skill-tag tech-fastapi">FastAPI</span>
+            <span class="skill-tag tech-python">Python</span>
+            <span class="skill-tag tech-rest">REST APIs</span>
+            <span class="skill-tag tech-microservices">Microservices</span>
           </div>
         </div>
 
@@ -1255,12 +1292,12 @@
             <h3>Cloud & DevOps</h3>
           </div>
           <div class="skill-tags">
-            <span class="skill-tag">Azure</span>
-            <span class="skill-tag">AWS</span>
-            <span class="skill-tag">Kubernetes</span>
-            <span class="skill-tag">Docker</span>
-            <span class="skill-tag">Terraform</span>
-            <span class="skill-tag">CI/CD</span>
+            <span class="skill-tag tech-azure">Azure</span>
+            <span class="skill-tag tech-aws">AWS</span>
+            <span class="skill-tag tech-k8s">Kubernetes</span>
+            <span class="skill-tag tech-docker">Docker</span>
+            <span class="skill-tag tech-terraform">Terraform</span>
+            <span class="skill-tag tech-cicd">CI/CD</span>
           </div>
         </div>
 
@@ -1270,12 +1307,12 @@
             <h3>Database & Tools</h3>
           </div>
           <div class="skill-tags">
-            <span class="skill-tag">PostgreSQL</span>
-            <span class="skill-tag">Supabase</span>
-            <span class="skill-tag">Azure SQL</span>
-            <span class="skill-tag">Redis</span>
-            <span class="skill-tag">Git</span>
-            <span class="skill-tag">Linux</span>
+            <span class="skill-tag tech-postgres">PostgreSQL</span>
+            <span class="skill-tag tech-supabase">Supabase</span>
+            <span class="skill-tag tech-azure">Azure SQL</span>
+            <span class="skill-tag tech-redis">Redis</span>
+            <span class="skill-tag tech-git">Git</span>
+            <span class="skill-tag tech-linux">Linux</span>
           </div>
         </div>
       </div>
