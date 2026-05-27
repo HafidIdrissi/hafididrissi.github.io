@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 740 52" width="740" height="52">
+  <style>
+    text {
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 19px;
+      font-weight: bold;
+      fill: #F97316;
+    }
+    .l1 { animation: f1 16s linear infinite; }
+    .l2 { animation: f2 16s linear infinite; opacity: 0; }
+    .l3 { animation: f3 16s linear infinite; opacity: 0; }
+    .l4 { animation: f4 16s linear infinite; opacity: 0; }
+    .l5 { animation: f5 16s linear infinite; opacity: 0; }
+    .cur {
+      fill: #F97316;
+      animation: blink 0.8s step-end infinite;
+    }
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50%       { opacity: 0; }
+    }
+    @keyframes f1 {
+      0%,  14% { opacity: 1; }
+      17%, 83% { opacity: 0; }
+      97%,100% { opacity: 1; }
+    }
+    @keyframes f2 {
+      0%,  16% { opacity: 0; }
+      19%, 32% { opacity: 1; }
+      35%,100% { opacity: 0; }
+    }
+    @keyframes f3 {
+      0%,  34% { opacity: 0; }
+      37%, 50% { opacity: 1; }
+      53%,100% { opacity: 0; }
+    }
+    @keyframes f4 {
+      0%,  52% { opacity: 0; }
+      55%, 68% { opacity: 1; }
+      71%,100% { opacity: 0; }
+    }
+    @keyframes f5 {
+      0%,  70% { opacity: 0; }
+      73%, 86% { opacity: 1; }
+      89%,100% { opacity: 0; }
+    }
+  </style>
+
+  <!-- Line 1 -->
+  <text x="50%" y="34" text-anchor="middle" class="l1">
+    &#x1F916; influencepersona.com &#x2014; AI Influencer Studio
+  </text>
+
+  <!-- Line 2 -->
+  <text x="50%" y="34" text-anchor="middle" class="l2">
+    &#x2601; Azure &#x7C; Kubernetes &#x7C; Terraform &#x7C; DevOps
+  </text>
+
+  <!-- Line 3 -->
+  <text x="50%" y="34" text-anchor="middle" class="l3">
+    &#x1F9E0; Claude &#x7C; Gemini &#x7C; fal.ai &#x7C; LLM pipelines
+  </text>
+
+  <!-- Line 4 -->
+  <text x="50%" y="34" text-anchor="middle" class="l4">
+    &#x1F680; Idea to production &#x2014; solo or in team
+  </text>
+
+  <!-- Line 5 -->
+  <text x="50%" y="34" text-anchor="middle" class="l5">
+    &#x1F4A1; Boring infra. Exciting products.
+  </text>
+
+  <!-- Blinking cursor — positioned after longest line approx -->
+  <rect x="668" y="16" width="10" height="22" rx="1" class="cur"/>
+</svg>
