@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 740 236" width="740" height="236">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%"   stop-color="#0D1117"/>
+      <stop offset="100%" stop-color="#131A24"/>
+    </linearGradient>
+  </defs>
+
+  <style>
+    .mono { font-family: 'SFMono-Regular', 'Courier New', Courier, monospace; font-size: 14px; }
+    .dim  { fill: #7D8590; }
+    .ok   { fill: #22C55E; }
+    .warn { fill: #F97316; }
+    .txt  { fill: #E2E8F0; }
+    .acc  { fill: #6366F1; }
+
+    .row { opacity: 0; }
+    .r1 { animation: r1 13s linear infinite; }
+    .r2 { animation: r2 13s linear infinite; }
+    .r3 { animation: r3 13s linear infinite; }
+    .r4 { animation: r4 13s linear infinite; }
+    .r5 { animation: r5 13s linear infinite; }
+    .r6 { animation: r6 13s linear infinite; }
+    .r7 { animation: r7 13s linear infinite; }
+
+    @keyframes r1 { 0%,3%{opacity:0;transform:translateX(-6px)}   5%,88%{opacity:1;transform:translateX(0)} 94%,100%{opacity:0} }
+    @keyframes r2 { 0%,8.5%{opacity:0;transform:translateX(-6px)} 11%,88%{opacity:1;transform:translateX(0)} 94%,100%{opacity:0} }
+    @keyframes r3 { 0%,14%{opacity:0;transform:translateX(-6px)}  16%,88%{opacity:1;transform:translateX(0)} 94%,100%{opacity:0} }
+    @keyframes r4 { 0%,19.5%{opacity:0;transform:translateX(-6px)} 22%,88%{opacity:1;transform:translateX(0)} 94%,100%{opacity:0} }
+    @keyframes r5 { 0%,25%{opacity:0;transform:translateX(-6px)}  27%,88%{opacity:1;transform:translateX(0)} 94%,100%{opacity:0} }
+    @keyframes r6 { 0%,30.5%{opacity:0;transform:translateX(-6px)} 33%,88%{opacity:1;transform:translateX(0)} 94%,100%{opacity:0} }
+    @keyframes r7 { 0%,36%{opacity:0;transform:translateX(-6px)}  38%,88%{opacity:1;transform:translateX(0)} 94%,100%{opacity:0} }
+
+    .blink { animation: blink 1s step-end infinite; }
+    @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
+
+    .beat { animation: beat 1.4s ease-in-out infinite; }
+    @keyframes beat { 0%,100%{opacity:0.35} 50%{opacity:1} }
+  </style>
+
+  <rect x="0.5" y="0.5" width="739" height="235" rx="10" fill="url(#bg)" stroke="#30363D"/>
+  <line x1="0" y1="34" x2="740" y2="34" stroke="#30363D"/>
+  <circle cx="20" cy="17" r="5" fill="#FF5F56"/>
+  <circle cx="38" cy="17" r="5" fill="#FFBD2E"/>
+  <circle cx="56" cy="17" r="5" fill="#27C93F"/>
+  <text class="mono dim" x="86" y="22">hafid@prod — shipping status</text>
+
+  <g class="mono">
+    <g class="row r1">
+      <text class="acc"  x="22" y="62">$</text>
+      <text class="txt"  x="40" y="62">hafid --products --status</text>
+    </g>
+    <g class="row r2">
+      <text class="ok"   x="22" y="88">✔</text>
+      <text class="txt"  x="44" y="88">Persona Studio</text>
+      <text class="dim"  x="240" y="88">live · paying users · flagship</text>
+    </g>
+    <g class="row r3">
+      <text class="ok"   x="22" y="112">✔</text>
+      <text class="txt"  x="44" y="112">Checkai.app</text>
+      <text class="dim"  x="240" y="112">live · paying users</text>
+    </g>
+    <g class="row r4">
+      <text class="ok"   x="22" y="136">✔</text>
+      <text class="txt"  x="44" y="136">GoEditPDF</text>
+      <text class="dim"  x="240" y="136">live · free · zero upload</text>
+    </g>
+    <g class="row r5">
+      <text class="ok"   x="22" y="160">✔</text>
+      <text class="txt"  x="44" y="160">LexiNegotiate</text>
+      <text class="dim"  x="240" y="160">live · no signup</text>
+    </g>
+    <g class="row r6">
+      <text class="warn beat" x="22" y="184">▸</text>
+      <text class="txt"  x="44" y="184">Time&#8209;Tracker</text>
+      <text class="dim"  x="240" y="184">v1 released · Windows</text>
+    </g>
+    <g class="row r7">
+      <text class="warn beat" x="22" y="208">▸</text>
+      <text class="txt"  x="44" y="208">CRM RH · Orchestrateur</text>
+      <text class="dim"  x="240" y="208">building</text>
+      <rect class="blink" x="330" y="198" width="8" height="14" fill="#F97316"/>
+    </g>
+  </g>
+</svg>
