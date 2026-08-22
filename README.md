@@ -1,43 +1,64 @@
-# 👋 Hi, I'm Hafid Idrissi
+# hafididrissi.github.io
 
-**Cloud & DevOps Engineer · Software Developer · AI Enthusiast**  
-Passionate about building scalable cloud architectures, DevOps pipelines, and experimenting with AI/ML applications. Experienced with Azure, Kubernetes, Terraform, and embedded systems.
+CV et portfolio de **Hafid Idrissi** — ingénieur logiciel Full-Stack & Cloud.
+En ligne : **[hafididrissi.github.io](https://hafididrissi.github.io/)**
 
----
+## Principe
 
-## ⭐ Projects
+Le contenu du site est dérivé d'un **CV master audité** (`cv_master_Hafid_IDRISSI.json`, hors dépôt) dont
+chaque entrée porte un statut de validation. Règle de fond, reprise du CV master :
 
-- **Quadrotor Supervisor**  
-  Drone project with Arduino, Python and 3D printing. Focus on control & automation.
+> Ne jamais inventer, extrapoler ou renforcer un fait absent du fichier source.
+> Ne reprendre un chiffre que s'il figure explicitement dans un élément validé, et conserver son contexte.
 
-- **Cloud Microservices POC**  
-  Designed and deployed a secure microservices platform on **Azure AKS** with Terraform, Azure DevOps pipelines, and integrated services (SQL DB, Key Vault, Service Bus).
+Les expériences confrontées à une source primaire — dépôt de code, rapport de stage, contrat, diplôme —
+portent la mention **Vérifié** sur le site, avec la source en infobulle.
 
-- **SmartDoor FaceID**  
-  Edge AI project with Raspberry Pi, OpenCV and MQTT for secure door access.
+Conformément aux règles du CV master, le site présente **une seule section « Expériences »** : les projets
+personnels, entrepreneuriaux, académiques et de recherche y figurent avec un libellé de type explicite,
+jamais présentés comme des emplois salariés.
 
-- **Industrial IHM**  
-  GUI developed for embedded nuclear sensors. Expertise in **C++/C, Python, ROS** environments.
+## Structure
 
----
+```
+index.html            page unique — CSS et JS intégrés, aucune dépendance hors Google Fonts
+data/cv-site.json     source de vérité du contenu (expériences, dépôts, filtres)
+tools/build_site.py   rend data/cv-site.json en HTML statique dans index.html
+assets/pdf/           CV téléchargeable
+assets/*.svg          bannières animées du README de profil GitHub
 
-## 🧰 Tech Stack
+github-profile-README.md          copie de travail du README de github.com/HafidIdrissi/HafidIdrissi
+github-profile-snake-workflow.yml copie de travail de .github/workflows/snake.yml du même dépôt
+```
 
-**Languages:** C#, Python, Java, C/C++, SQL  
-**Web & App:** .NET, React, FastAPI, REST/GraphQL  
-**Cloud:** Azure (AKS, Key Vault, Service Bus), Docker, Kubernetes  
-**Infra:** Terraform, Helm  
-**AI/ML:** PyTorch, OpenCV  
-**CI/CD:** GitHub Actions, Azure DevOps  
+## Modifier le contenu
 
----
+1. Éditer `data/cv-site.json`.
+2. Régénérer la page :
 
-## 📫 Contact
+   ```bash
+   python tools/build_site.py
+   ```
 
-📧 Email: [idrissihafez@gmail.com](mailto:idrissihafez@gmail.com)  
-💼 LinkedIn: [hafid-idrissi](https://www.linkedin.com/in/hafid-idrissi)  
-🐙 GitHub: [HafidIdrissi](https://github.com/HafidIdrissi)  
+3. Vérifier localement :
 
----
+   ```bash
+   python -m http.server 8777
+   # http://127.0.0.1:8777/
+   ```
 
-© 2025 Hafid Idrissi · Built with ❤️ using GitHub Pages
+Le rendu est **statique** : le contenu du CV est présent dans le HTML servi, donc lisible par les moteurs
+de recherche, les outils de recrutement et à l'impression. Le JavaScript ne gère que le filtrage des
+expériences, la bascule de thème, les révélations au scroll et le rafraîchissement facultatif du nombre
+d'étoiles GitHub — la page reste complète sans lui.
+
+## Choix techniques
+
+- Page unique, sans framework ni build front-end : rien à installer pour servir le site.
+- Thème clair/sombre suivant les préférences système, avec bascule mémorisée en `localStorage`.
+- Filtres d'expériences par nature — sélection, entreprise, produits, recherche, académique.
+- `prefers-reduced-motion` respecté ; repli `<noscript>` qui affiche tout le contenu.
+
+## Licence
+
+Le code de la page est réutilisable ; le contenu du CV, les documents et les visuels personnels ne le sont pas.

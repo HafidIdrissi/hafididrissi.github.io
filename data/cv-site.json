@@ -1,0 +1,357 @@
+{
+  "_comment": "Données du site, dérivées de cv_master_Hafid_IDRISSI.json (audit du 2026-08-20). Ne rien ajouter qui ne figure pas dans le CV master. Régénérer index.html avec: python tools/build_site.py",
+  "types": {
+    "stage":      {"label": "Stage",                  "cls": "work"},
+    "emploi":     {"label": "Emploi",                 "cls": "work"},
+    "entrep":     {"label": "Projet entrepreneurial", "cls": "venture"},
+    "perso":      {"label": "Projet personnel",       "cls": "product"},
+    "recherche":  {"label": "Projet de recherche",    "cls": "research"},
+    "academique": {"label": "Projet académique",      "cls": "academic"},
+    "formation":  {"label": "Formation",              "cls": "other"},
+    "engagement": {"label": "Engagement",             "cls": "other"}
+  },
+  "filters": [
+    {"k": "star",       "label": "Sélection"},
+    {"k": "entreprise", "label": "Entreprise &amp; stages"},
+    {"k": "produit",    "label": "Produits &amp; entrepreneuriat"},
+    {"k": "recherche",  "label": "Recherche &amp; IA"},
+    {"k": "academique", "label": "Académique &amp; engagement"},
+    {"k": "all",        "label": "Tout"}
+  ],
+  "experiences": [
+    {
+      "id": "hager", "group": "entreprise", "star": true, "type": "stage",
+      "role": "Stagiaire PFE — Architecture Cloud &amp; IoT (PoC AKS)",
+      "org": "Hager Group", "place": "Obernai (67), France",
+      "dates": "Avr. 2024 — Oct. 2024", "verified": true,
+      "ctx": "Stage de fin d'études au sein de l'équipe Architecture &amp; Integration Management de l'IoT Cloud Factory. Mission : réaliser un Proof of Concept pour évaluer la faisabilité du déploiement sécurisé de services API Hager sur Azure Kubernetes Service, en réseau privé.",
+      "bullets": [
+        "Pris en charge la conception de bout en bout d'un PoC Azure pour évaluer le déploiement sécurisé de services IoT sur AKS, de l'analyse de l'existant jusqu'aux tests de validation.",
+        "Défini une architecture Azure privée segmentée en trois réseaux virtuels, avec VNet Peering et Private Endpoint, afin de sécuriser les communications entre AKS, les machines virtuelles et Azure SQL.",
+        "Conteneurisé et orchestré des API IoT .NET avec Docker, Docker Compose et Kubernetes ; intégré des contrôles de santé et résolu les problématiques de connexion à Azure SQL.",
+        "Remédié à une incompatibilité ARM64 des images Docker en mettant en place un builder compatible, puis un nœud AMD64 adapté aux workloads et l'autoscaling du cluster.",
+        "Établi un chiffrage mensuel de l'architecture cible — calcul, machines virtuelles, réseau privé et messagerie — en formalisant les hypothèses, limites et postes restant à affiner.",
+        "Développé, au sein d'une équipe pluridisciplinaire, un prototype de prédiction énergétique fondé sur des données IoT et présenté à un jury Hager-Microsoft lors du hackathon GenIA."
+      ],
+      "tech": ["Microsoft Azure", "Azure Kubernetes Service", "Kubernetes", "Docker", "Docker Compose", "Azure SQL", "VNet Peering", "Private Endpoints", "Azure DevOps", "Swagger/OpenAPI", ".NET Core", "Azure Data Explorer", "Databricks", "Azure OpenAI", "Semantic Kernel"],
+      "src": "Source primaire vérifiée : rapport de stage PFE"
+    },
+    {
+      "id": "mirion", "group": "entreprise", "star": true, "type": "stage",
+      "role": "Stagiaire R&amp;D — Systèmes embarqués, SLAM &amp; IHM",
+      "org": "Mirion Technologies", "place": "France",
+      "dates": "Juin 2023 — Août 2023", "verified": true,
+      "ctx": "Stage de professionnalisation en département R&amp;D. Mission : concevoir et développer une interface mobile de cartographie pour un système d'inspection industrielle, intégrant LiDAR, SLAM et visualisation temps réel sur plateforme embarquée.",
+      "bullets": [
+        "Conçu et validé de bout en bout un prototype embarqué de cartographie 2D en temps réel, de l'analyse des besoins au choix de la solution SLAM et aux tests fonctionnels.",
+        "Défini l'architecture logicielle ROS Noetic/Python intégrant un LiDAR RPLIDAR A1M8, un capteur d'orientation HWT905 et Hector SLAM ; structuré les échanges temps réel via les topics ROS et la visualisation RViz.",
+        "Développé une IHM Python/Tkinter automatisant le lancement des opérations LiDAR et SLAM, la visualisation de la cartographie et l'enregistrement des cartes, afin de limiter les erreurs opérateur.",
+        "Fiabilisé la localisation en filtrant les données LiDAR et en exploitant les informations de mouvement ; réduit les décalages et dérives observés lors des essais.",
+        "Arbitré la migration du Raspberry Pi 4 vers un mini-PC Intel Alder Lake-N100 après identification d'une incompatibilité avec la version de ROS requise."
+      ],
+      "tech": ["ROS Noetic", "Python", "Ubuntu 20.04", "Hector SLAM", "RPLIDAR A1M8", "Capteur HWT905", "Tkinter", "RViz", "Raspberry Pi 4", "Intel N100", "UART", "Linux embarqué"],
+      "src": "Source primaire vérifiée : rapport de stage de professionnalisation"
+    },
+    {
+      "id": "persona", "group": "produit", "star": true, "type": "entrep",
+      "role": "Fondateur &amp; Ingénieur Full-Stack",
+      "org": "Influence Persona", "url": "https://influencepersona.com/", "place": "À distance",
+      "dates": "Mai 2026 — Juil. 2026", "verified": true,
+      "ctx": "Conception en solo d'une plateforme SaaS de création de contenus pour influenceurs virtuels. Le dépôt documente une architecture applicative avancée ; certains prérequis restent à finaliser avant un lancement SaaS complet.",
+      "bullets": [
+        "Piloté en autonomie la conception d'une plateforme SaaS multimodale couvrant tout le cycle de création de contenus : images, avatars réutilisables, fusion de scènes, vidéo, lipsync, médiathèque et administration.",
+        "Défini une architecture serverless séparant un frontend multi-page Vite des services sensibles opérés par Supabase : authentification, PostgreSQL avec RLS, stockage et quinze Edge Functions Deno.",
+        "Conçu l'orchestration multi-fournisseurs des traitements IA via fal.ai, Alexya et EvoLink, avec suivi asynchrone des générations vidéo, persistance des résultats, galerie et gestion des crédits.",
+        "Structuré le modèle de monétisation autour de packs de crédits et des parcours Stripe Checkout, portail client et webhooks, soutenus par des migrations SQL dédiées à la facturation et au durcissement de la sécurité.",
+        "Industrialisé la chaîne de livraison avec GitHub Actions, contrôles de qualité JavaScript/Deno, déploiements Supabase et Cloudflare Pages, supervision Sentry et gestion du consentement analytique."
+      ],
+      "tech": ["Vite 6", "JavaScript", "TypeScript", "Supabase Auth", "PostgreSQL / PLpgSQL", "Row Level Security", "Supabase Storage", "Edge Functions Deno", "Stripe", "fal.ai", "Alexya", "EvoLink", "Cloudflare Pages", "GitHub Actions", "Playwright", "Sentry"],
+      "src": "Source primaire vérifiée : dépôt privé plateforme-persona — 201 commits, 15 Edge Functions, 33 migrations SQL"
+    },
+    {
+      "id": "checkai", "group": "produit", "star": true, "type": "perso",
+      "role": "Concepteur &amp; Développeur Full-Stack",
+      "org": "CheckAI", "url": "https://checkai-app.com/", "place": "À distance",
+      "dates": "Nov. 2025 — Avr. 2026", "verified": true,
+      "ctx": "SaaS de classification de textes assisté par un modèle de détection hébergé sur Hugging Face, avec authentification, crédits et facturation.",
+      "bullets": [
+        "Conçu une architecture SaaS serverless sous React/Vite et Netlify Functions, séparant les responsabilités de détection, facturation, gestion de session et suppression de compte.",
+        "Intégré un pipeline d'inférence basé sur RoBERTa via Hugging Face, avec normalisation du score en probabilité exploitable par l'interface et gestion des indisponibilités du modèle.",
+        "Structuré le cycle d'usage autour des profils, crédits et quotas Supabase, avec contrôle préalable des droits d'analyse et persistance des résultats.",
+        "Implémenté le cycle de facturation Stripe — souscription, portail client et synchronisation par webhook — au sein de fonctions backend dédiées.",
+        "Automatisé la validation de construction du frontend via GitHub Actions à chaque push et pull request sur la branche principale."
+      ],
+      "tech": ["React 18", "Vite", "JavaScript", "Tailwind CSS", "Netlify Functions", "Supabase", "PostgreSQL", "Stripe", "Hugging Face Inference API", "RoBERTa", "GitHub Actions"],
+      "src": "Source primaire vérifiée : dépôt privé checkai-app — 57 commits, 6 fonctions serverless"
+    },
+    {
+      "id": "goeditpdf", "group": "produit", "star": true, "type": "perso",
+      "role": "Concepteur &amp; Développeur Front-End",
+      "org": "GoEditPDF", "url": "https://goeditpdf.com/", "place": "À distance",
+      "dates": "Déc. 2025 — Fév. 2026", "verified": true,
+      "ctx": "Éditeur PDF orienté confidentialité, exécutant les traitements directement dans le navigateur sans serveur applicatif pour les documents.",
+      "bullets": [
+        "Conçu une architecture privacy-by-design exécutant l'intégralité des traitements PDF dans le navigateur, sans transfert des documents vers un serveur applicatif.",
+        "Développé une chaîne fonctionnelle complète : fusion, réorganisation, rotation, extraction, annotation, insertion de contenus, signature, filigrane et caviardage visuel.",
+        "Assemblé PDF.js, PDF-Lib, Fabric.js et Tesseract.js au sein d'un même environnement afin d'articuler rendu, transformation, calques graphiques et OCR local.",
+        "Conduit l'internationalisation et l'adaptation responsive du produit en français, anglais et espagnol, complétées par des parcours d'aide, tutoriels et contenus éditoriaux."
+      ],
+      "tech": ["JavaScript", "HTML", "CSS", "PDF.js", "PDF-Lib", "Fabric.js", "Tesseract.js", "Traitement côté navigateur"],
+      "repo": "https://github.com/HafidIdrissi/goeditpdf-public",
+      "src": "Source primaire vérifiée : dépôts smartpdf et goeditpdf-public — 40 commits"
+    },
+    {
+      "id": "soh", "group": "recherche", "star": true, "type": "recherche",
+      "role": "Concepteur du prototype scientifique",
+      "org": "Estimation bayésienne du SOH de batteries Li-ion", "place": "À distance",
+      "dates": "Avr. 2026", "verified": true,
+      "ctx": "Travail préparatoire de recherche sur la prédiction de l'état de santé et de la durée de vie résiduelle de batteries, réalisé sur un jeu de données simulé inspiré des données NASA PCoE.",
+      "bullets": [
+        "Conçu et comparé deux approches bayésiennes pour l'estimation du State of Health : un modèle individuel par batterie et un modèle hiérarchique exploitant l'information partagée à l'échelle d'une flotte simulée.",
+        "Formalisé la dynamique de dégradation par une loi exponentielle et caractérisé les distributions a posteriori de l'état initial, du taux de dégradation et du bruit d'observation.",
+        "Conduit l'inférence NUTS avec PyMC et NumPyro, les contrôles prédictifs a posteriori et l'estimation de la durée de vie résiduelle avec intervalles crédibles à 90 %.",
+        "Quantifié la variabilité inter-batteries sur huit unités simulées et 150 cycles, puis analysé l'effet de mutualisation partielle du modèle hiérarchique."
+      ],
+      "tech": ["Python", "PyMC", "NumPyro / JAX", "NUTS", "NumPy", "Pandas", "SciPy", "ArviZ", "Matplotlib", "Inférence bayésienne hiérarchique"],
+      "repo": "https://github.com/HafidIdrissi/bayesian-soh-batteries",
+      "src": "Source primaire vérifiée : dépôt public bayesian-soh-batteries — données simulées, non validées sur cellules réelles"
+    },
+    {
+      "id": "lexi", "group": "produit", "star": true, "type": "perso",
+      "role": "Concepteur &amp; Développeur IA Front-End",
+      "org": "LexiNegotiate — prototype de hackathon", "place": "À distance",
+      "dates": "Fév. 2026 — Mars 2026", "verified": true,
+      "ctx": "Prototype React/TypeScript développé pour un hackathon Gemini afin d'assister l'analyse et la préparation de négociations contractuelles. L'outil fournit des suggestions et ne remplace pas un avis juridique.",
+      "bullets": [
+        "Conçu un prototype d'aide à la décision contractuelle acceptant texte, image ou PDF et mobilisant Gemini pour structurer l'analyse des risques et des clauses sensibles.",
+        "Défini un schéma de sortie JSON transformant la réponse du modèle en score de risque, exposition financière estimée, contre-propositions, difficulté de négociation et stratégies à trois niveaux.",
+        "Traduit les résultats IA en un tableau d'aide à la décision combinant jauge de risque, comparaison des clauses, scripts de négociation, options d'e-mails et rapport imprimable.",
+        "Étendu l'expérience avec un mentor conversationnel contextualisé et une fonction de synthèse vocale destinés à préparer les échanges."
+      ],
+      "tech": ["React 19", "TypeScript", "Vite", "Google GenAI SDK", "Gemini", "Sorties JSON structurées", "Text-to-Speech"],
+      "repo": "https://github.com/HafidIdrissi/LexiNegotiate-",
+      "demo": "https://www.youtube.com/watch?v=dinw3NJyobc",
+      "src": "Source primaire vérifiée : dépôt public LexiNegotiate- — statistiques d'interface simulées pour la démonstration"
+    },
+    {
+      "id": "eyeguard", "group": "academique", "star": true, "type": "academique",
+      "role": "Co-développeur IA, embarqué &amp; application mobile",
+      "org": "EyeGuard — projet académique de semestre", "place": "HEI/JUNIA",
+      "dates": "2023", "verified": true,
+      "ctx": "Projet académique en équipe de cinq : prototype fonctionnel de porte connectée combinant reconnaissance faciale, contrôle d'une gâche électrique par Raspberry Pi et application Android pour la gestion des autorisations.",
+      "bullets": [
+        "Co-conçu l'architecture d'EyeGuard, prototype de porte connectée associant vision par ordinateur, système embarqué, application Android et communication MQTT, dans un projet Agile de 140 heures.",
+        "Pris en charge en binôme la brique de reconnaissance faciale : évalué les solutions compatibles avec les ressources du Raspberry Pi, retenu OpenCV et résolu les difficultés de configuration avec la caméra Pi V2.",
+        "Implémenté un pipeline de vision embarquée combinant acquisition d'images, détection de visages par Haar Cascades et génération d'empreintes faciales par un extracteur CNN.",
+        "Développé la logique de journalisation des détections : capture, horodatage et stockage des visages, avec déduplication sur une fenêtre de 50 secondes."
+      ],
+      "tech": ["Python", "OpenCV", "Haar Cascades", "CNN Feature Extractor", "Raspberry Pi", "Caméra Pi V2", "Linux", "MQTT", "paho-mqtt", "Kotlin", "Android", "Jira", "Scrum"],
+      "src": "Source primaire vérifiée : rapport technique EyeGuard"
+    },
+    {
+      "id": "waste", "group": "recherche", "star": false, "type": "perso",
+      "role": "Concepteur &amp; Développeur Computer Vision",
+      "org": "Smart Waste Detector with YOLO", "place": "À distance",
+      "dates": "Août 2026", "verified": true,
+      "ctx": "Projet personnel de détection d'objets appliqué au tri des déchets, entraîné sur Google Colab avec le dataset public Garbage Detection — 6 Waste Categories.",
+      "bullets": [
+        "Conçu et entraîné, par transfert d'apprentissage, un modèle Ultralytics YOLO pour détecter six catégories de déchets : biodégradable, carton, verre, métal, papier et plastique.",
+        "Mis en place un pipeline reproductible sous Google Colab couvrant l'installation des dépendances, l'authentification Kaggle à l'exécution, le téléchargement du dataset, l'entraînement GPU et la sauvegarde des checkpoints.",
+        "Évalué le modèle après 30 époques avec un mAP50 de 0,496 et un mAP50-95 de 0,344 sur l'ensemble de validation.",
+        "Testé le modèle sur des photos personnelles et analysé les erreurs liées au décalage de domaine, à l'éclairage, au cadrage et au déséquilibre entre les classes."
+      ],
+      "tech": ["Python", "Ultralytics YOLO", "PyTorch", "Computer Vision", "Object Detection", "Transfer Learning", "Google Colab", "Kaggle API"],
+      "repo": "https://github.com/HafidIdrissi/smart-waste-detector-yolo",
+      "src": "Source primaire vérifiée : dépôt public smart-waste-detector-yolo"
+    },
+    {
+      "id": "huntflow", "group": "produit", "star": false, "type": "perso",
+      "role": "Concepteur &amp; Développeur Full-Stack",
+      "org": "HuntFlow — ATS/CRM indépendant", "place": "À distance",
+      "dates": "Juin 2026 — Juil. 2026", "verified": true,
+      "ctx": "Construction progressive d'un ATS/CRM destiné aux recruteurs indépendants et aux petites équipes RH, à partir d'un prototype fonctionnel puis migration vers une fondation SaaS Next.js et Supabase. Produit explicitement en construction.",
+      "bullets": [
+        "Conduit la conception produit d'un ATS/CRM en structurant les workflows candidats, clients, missions, relances et pipeline Kanban autour du suivi opérationnel du recrutement.",
+        "Fait évoluer un prototype fonctionnel avec persistance locale vers une fondation SaaS sous Next.js, React et TypeScript, tout en préservant les parcours métier déjà validés.",
+        "Structuré l'expérience applicative autour de vues spécialisées — candidats, clients, missions, prochaines actions, recherche, dashboard et export.",
+        "Fiabilisé l'environnement Supabase local sous Docker par des contrats de configuration, une synchronisation contrôlée des clés, des opérations de reset strictement locales, des smoke tests et du lint PostgreSQL."
+      ],
+      "tech": ["Next.js 16", "React 19", "TypeScript", "Tailwind CSS", "Supabase", "PostgreSQL", "Docker", "ESLint"],
+      "src": "Source primaire vérifiée : dépôt privé CRM_RH — 18 commits, fondation en construction"
+    },
+    {
+      "id": "devis", "group": "produit", "star": false, "type": "perso",
+      "role": "Concepteur &amp; Développeur Full-Stack",
+      "org": "Devis BTP", "url": "https://devis-chantier-ai.vercel.app/", "place": "À distance",
+      "dates": "Avr. 2026 — Mai 2026", "verified": true,
+      "ctx": "MVP d'aide à la préparation de devis pour les artisans et entreprises du bâtiment, à partir d'une description de travaux ou d'une photographie de chantier.",
+      "bullets": [
+        "Conçu un MVP métier capable de transformer une description de travaux ou une photographie de chantier en première base de devis structurée avec l'assistance de Gemini.",
+        "Modélisé le cycle de préparation d'un devis en intégrant lignes de prestations, catégories, quantités, prix hors taxes, TVA, remises, acomptes et informations contractantes.",
+        "Séparé le traitement IA du frontend au moyen d'une API Node.js protégeant la clé Gemini et encadrant la validation et la taille des requêtes image.",
+        "Livré le flux de restitution par impression et enregistrement PDF, puis préparé l'exécution serverless sur Vercel."
+      ],
+      "tech": ["React", "JavaScript", "Node.js", "Gemini API", "API serverless", "Vercel"],
+      "repo": "https://github.com/HafidIdrissi/Devis-Chantier-AI",
+      "src": "Source primaire vérifiée : dépôt public Devis-Chantier-AI — MVP, 4 commits"
+    },
+    {
+      "id": "emailtrack", "group": "produit", "star": false, "type": "perso",
+      "role": "Concepteur &amp; Développeur Full-Stack",
+      "org": "EmailTrack — SaaS expérimental", "place": "À distance",
+      "dates": "Déc. 2025", "verified": true,
+      "ctx": "Prototype full-stack de suivi d'ouverture d'e-mails associant une API, un dashboard web et une extension Chrome pour Gmail.",
+      "bullets": [
+        "Défini une architecture produit multi-composants associant API Express/MongoDB, dashboard React et extension Chrome Manifest V3.",
+        "Conçu le cœur du système de tracking autour d'identifiants uniques et de pixels d'ouverture, avec enregistrement des événements et restitution des indicateurs dans le dashboard.",
+        "Structuré les services transverses d'authentification JWT, quotas par formule, notifications temps réel via Socket.io et paiement Stripe.",
+        "Couvert les comportements critiques par des tests Jest/Supertest portant sur l'authentification, la création de suivis, l'application des limites du plan gratuit et la comptabilisation des ouvertures."
+      ],
+      "tech": ["Node.js", "Express", "MongoDB", "Mongoose", "Socket.io", "React", "Vite", "Zustand", "Recharts", "JWT", "Stripe", "Chrome MV3", "Jest", "Supertest", "Docker"],
+      "src": "Source primaire vérifiée : dépôt privé emailtrack — prototype, aucun déploiement public"
+    },
+    {
+      "id": "junia-tut", "group": "entreprise", "star": false, "type": "emploi",
+      "role": "Tuteur en soutien pédagogique",
+      "org": "JUNIA", "place": "Lille, France",
+      "dates": "Oct. 2023 — Juin 2024", "verified": true,
+      "ctx": "CDD à temps partiel pour l'année scolaire 2023/2024, volume contractuel maximal de 160 heures, dans le cadre de dispositifs régionaux liés à la réussite scolaire et à la démocratisation de l'enseignement supérieur.",
+      "bullets": [
+        "Accompagné des collégiens et lycéens de Lille dans le cadre de séances de soutien pédagogique.",
+        "Adapté l'accompagnement à deux niveaux d'enseignement distincts afin de soutenir la compréhension et l'autonomie des élèves.",
+        "Contribué à un dispositif de réussite scolaire soutenu par le Conseil régional des Hauts-de-France."
+      ],
+      "tech": [],
+      "src": "Source primaire vérifiée : contrat de tutorat JUNIA"
+    },
+    {
+      "id": "visavenir", "group": "academique", "star": false, "type": "academique",
+      "role": "Conception produit &amp; prototypage UX/UI",
+      "org": "Vis'Avenir — Institution Saint-Jacques", "place": "Hazebrouck, France",
+      "dates": "Nov. 2023 — Janv. 2024", "verified": true,
+      "ctx": "Projet académique de 5e année mené sur huit semaines pour l'Institution Saint-Jacques d'Hazebrouck, commanditaire réel accueillant environ 1 200 élèves du collège au BTS.",
+      "bullets": [
+        "Mené, au sein d'une équipe de six élèves-ingénieurs, le cadrage d'une plateforme d'orientation, de la clarification des enjeux à la formalisation d'une solution destinée à un futur développement.",
+        "Structuré la recherche utilisateur en croisant les attentes du commanditaire, les retours des enseignants, parents et élèves, ainsi qu'un questionnaire de 40 réponses.",
+        "Évalué les principales solutions d'orientation du marché et établi un positionnement fonctionnel sur mesure.",
+        "Organisé l'exécution sur huit semaines autour de cinq phases, d'un espace de travail partagé et de revues hebdomadaires avec le commanditaire.",
+        "Traduit les besoins priorisés en une maquette Figma multi-profils et un cahier des charges fonctionnel et technique."
+      ],
+      "tech": ["Figma", "Google Forms", "Microsoft Teams", "Diagramme de Gantt", "Benchmark fonctionnel", "Prototypage UX/UI", "Cahier des charges"],
+      "src": "Source primaire vérifiée : rapport Vis'Avenir"
+    },
+    {
+      "id": "drone", "group": "academique", "star": false, "type": "academique",
+      "role": "Co-concepteur mécanique &amp; systèmes embarqués",
+      "org": "Drone de supervision industrielle", "place": "HEI/JUNIA",
+      "dates": "Nov. 2021 — Juin 2022", "verified": true,
+      "ctx": "Projet académique en binôme : reprise d'un drone non fonctionnel conçu par une promotion précédente, puis étude, reconception et assemblage d'un quadricoptère destiné au suivi visuel d'une chaîne de production.",
+      "bullets": [
+        "Conduit en binôme la reconception de bout en bout d'un quadricoptère de supervision industrielle, depuis la clarification du besoin jusqu'aux essais d'intégration.",
+        "Structuré l'architecture système et le cahier des charges en traduisant les contraintes de vol intérieur, de stabilité, de charge et de suivi visuel en choix de conception d'une configuration Quad-X.",
+        "Établi le dimensionnement de la chaîne de propulsion et d'alimentation, puis sélectionné les moteurs brushless 1000 KV, les ESC 30 A et la batterie LiPo 3S 11,1 V.",
+        "Mené la conception mécanique sous SolidWorks, la fabrication additive et l'assemblage du châssis.",
+        "Défini et intégré l'architecture électronique autour d'un contrôleur de vol F722, d'une liaison Taranis/FrSky et d'une ESP32-CAM ; configuré Betaflight et diagnostiqué les problèmes de gyroscope et de synchronisation moteurs."
+      ],
+      "tech": ["SolidWorks", "Impression 3D", "Fritzing", "Betaflight", "Contrôleur F722", "Taranis X9D Plus / FrSky", "ESP32-CAM", "Moteurs brushless 1000 KV", "ESC 30 A", "LiPo 3S", "Analyse fonctionnelle"],
+      "src": "Source primaire vérifiée : rapport de projet drone"
+    },
+    {
+      "id": "univers", "group": "entreprise", "star": false, "type": "stage",
+      "role": "Stagiaire ouvrier — Voirie &amp; assainissement",
+      "org": "UNIVERS BAT SARL", "place": "Kénitra, Maroc",
+      "dates": "Juil. 2021 — Août 2021", "verified": true,
+      "ctx": "Stage d'observation d'un mois sur le chantier d'aménagement urbain et d'infrastructures hydrauliques Al Boustane R1, réalisé pour le maître d'ouvrage Al Omrane. Projet d'un montant annoncé de 78,4 millions de dirhams.",
+      "bullets": [
+        "Analysé l'organisation opérationnelle d'un chantier d'aménagement urbain, en étudiant la coordination entre direction de travaux, conduite de chantier, topographie, laboratoire et équipes terrain.",
+        "Étudié la chaîne d'exécution des travaux de terrassement et de voirie, de l'implantation topographique aux fouilles, déblais, remblais, tranchées et chaussées.",
+        "Examiné l'intégration des réseaux d'eaux usées et pluviales, d'eau potable, d'électricité et de télécommunications.",
+        "Documenté le processus de réalisation des regards, du ferraillage au bétonnage, ainsi que le protocole de contrôle d'étanchéité."
+      ],
+      "tech": ["Voirie et assainissement", "Terrassement", "Topographie", "Réseaux EU/EP", "Béton armé", "Contrôle d'étanchéité"],
+      "src": "Source primaire vérifiée : rapport de stage ouvrier"
+    },
+    {
+      "id": "ea", "group": "academique", "star": false, "type": "formation",
+      "role": "Stage leadership en environnement militaire",
+      "org": "École de l'Air et de l'Espace — Smart Challenge JUNIA", "place": "Salon-de-Provence (13)",
+      "dates": "Fév. 2024", "verified": true,
+      "ctx": "Stage leadership de cinq jours organisé par l'École de l'Air et de l'Espace pour des élèves ingénieurs de JUNIA, sous la forme d'une immersion en environnement militaire.",
+      "bullets": [
+        "Pris part à un stage intensif de cinq jours en environnement militaire.",
+        "Mis à l'épreuve maîtrise de soi, capacité de dépassement et leadership à travers des ateliers de commandement et des activités collectives exigeantes.",
+        "Découvert les valeurs et traditions de l'armée de l'Air et de l'Espace — topographie, piste d'audace, parcours du combattant et visites d'unités."
+      ],
+      "tech": [],
+      "src": "Source primaire vérifiée"
+    },
+    {
+      "id": "smile", "group": "recherche", "star": false, "type": "academique",
+      "role": "Développeur Deep Learning &amp; Computer Vision",
+      "org": "Smile Detection — projet académique", "place": "HEI/JUNIA",
+      "dates": "2023", "verified": false,
+      "ctx": "Projet académique de détection de sourire réalisé à partir d'un jeu de données d'images provenant de Kaggle, entraîné sur l'infrastructure GPU de l'école.",
+      "bullets": [
+        "Réalisé un projet de computer vision et deep learning consacré à la détection de sourire à partir d'un jeu de données Kaggle.",
+        "Entraîné le modèle sur l'infrastructure GPU de HEI/JUNIA.",
+        "Travaillé sur un jeu de données de grande taille ; le volume exact reste à confirmer avant toute revendication chiffrée."
+      ],
+      "tech": ["Deep Learning", "Computer Vision", "GPU computing", "Kaggle dataset"],
+      "src": ""
+    },
+    {
+      "id": "inditex", "group": "entreprise", "star": false, "type": "emploi",
+      "role": "Vendeur",
+      "org": "Inditex (Zara)", "place": "Le Chesnay-Rocquencourt (78)",
+      "dates": "Août 2025 — Sept. 2025", "verified": false,
+      "ctx": "Emploi de transition après fin d'études, mené en parallèle du développement de projets techniques personnels.",
+      "bullets": [
+        "Assuré la relation client en boutique sur un flux soutenu, en centre commercial.",
+        "Travaillé en équipe sur objectifs commerciaux avec les standards de marque Inditex.",
+        "Géré des situations client complexes — retours, réclamations — avec diplomatie."
+      ],
+      "tech": [],
+      "src": ""
+    },
+    {
+      "id": "auchan", "group": "entreprise", "star": false, "type": "emploi",
+      "role": "Employé polyvalent",
+      "org": "Auchan Retail", "place": "France",
+      "dates": "Juil. 2025 — Août 2025", "verified": false,
+      "ctx": "Emploi transitoire pendant la recherche de poste d'ingénieur, couplé au développement de projets techniques en parallèle.",
+      "bullets": [
+        "Polyvalence rayon, caisse et mise en rayon sur un hypermarché à fort trafic.",
+        "Respecté des process opérationnels stricts — traçabilité, hygiène, rotation des stocks.",
+        "Coordination directe avec les chefs de rayon et l'équipe sur un rythme soutenu."
+      ],
+      "tech": [],
+      "src": ""
+    },
+    {
+      "id": "speakers", "group": "academique", "star": false, "type": "engagement",
+      "role": "Orateur sélectionné",
+      "org": "Kénitra Speakers", "place": "Kénitra, Maroc",
+      "dates": "2017", "verified": false,
+      "ctx": "",
+      "bullets": [
+        "Sélectionné parmi les candidats pour concevoir et présenter un discours devant plus de 100 personnes.",
+        "Travaillé la structure narrative et la vulgarisation de thématiques complexes.",
+        "Acquis une aisance en prise de parole publique, réinvestie en présentations techniques et démonstrations."
+      ],
+      "tech": [],
+      "src": ""
+    }
+  ],
+  "repos": [
+    {"n": "Time-Tracker", "d": "Suivi de temps Windows automatique et local : applications et onglets de navigateur dans une base SQLite, sans compte ni télémétrie. Installeur signé, licence MIT.", "l": "Python", "lc": "#3572A5", "s": 2, "live": "Release"},
+    {"n": "goeditpdf-public", "d": "Éditeur PDF privacy-first : fusion, annotation, signature, filigrane et OCR local, entièrement dans le navigateur.", "l": "HTML", "lc": "#e34c26", "s": 1, "live": "goeditpdf.com"},
+    {"n": "LexiNegotiate-", "d": "Prototype d'analyse de contrats assistée par Gemini : score de risque, comparaison de clauses et scripts de négociation.", "l": "TypeScript", "lc": "#3178c6", "s": 2, "live": "Démo vidéo"},
+    {"n": "bayesian-soh-batteries", "d": "Inférence bayésienne hiérarchique pour la prédiction du State-of-Health de batteries Li-ion, avec PyMC et NumPyro.", "l": "Python", "lc": "#3572A5", "s": 0, "live": ""},
+    {"n": "smart-waste-detector-yolo", "d": "Détection de six catégories de déchets par transfert d'apprentissage Ultralytics YOLO — mAP50 de 0,496 après 30 époques.", "l": "Jupyter Notebook", "lc": "#DA5B0B", "s": 0, "live": ""},
+    {"n": "cv-pdf-studio", "d": "Skill d'agent générant des CV et lettres de motivation PDF à partir de preuves vérifiées, avec contrôle de provenance et de lisibilité ATS.", "l": "Python", "lc": "#3572A5", "s": 0, "live": ""},
+    {"n": "humanizer", "d": "Skill Claude Code qui retire les marqueurs d'écriture IA et réécrit un texte en voix humaine — anglais et français.", "l": "Markdown", "lc": "#6a7484", "s": 1, "live": ""},
+    {"n": "Devis-Chantier-AI", "d": "MVP de préparation de devis BTP à partir d'une description de travaux ou d'une photo de chantier, assisté par Gemini.", "l": "JavaScript", "lc": "#f1e05a", "s": 0, "live": "Démo"},
+    {"n": "expense-tracker", "d": "Suivi de dépenses Next.js avec budget quotidien flexible et persistance locale, sans backend.", "l": "TypeScript", "lc": "#3178c6", "s": 3, "live": "Démo"},
+    {"n": "hafididrissi.github.io", "d": "Ce site — portfolio statique, sans dépendance externe hors polices.", "l": "HTML", "lc": "#e34c26", "s": 1, "live": "En ligne"}
+  ]
+}
