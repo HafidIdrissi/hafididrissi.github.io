@@ -1,14 +1,14 @@
 #!/usr/bin/env python3
-"""Rend les sections dynamiques de index.html en HTML statique.
+"""Render the dynamic sections of index.html as static HTML.
 
-Source de vérité : data/cv-site.json, lui-même dérivé de
-Documents/Thèses/cv_master_Hafid_IDRISSI.json (audit du 2026-08-20).
+Source of truth: data/cv-site.json, itself derived from
+Documents/Thèses/cv_master_Hafid_IDRISSI.json (audit of 2026-08-20).
 
-Le rendu est statique pour que le contenu du CV soit lisible par les moteurs
-de recherche, les scrapers de recrutement et à l'impression, sans dépendre de
-JavaScript. Le JS restant ne gère que le filtrage, le thème et le scrollspy.
+The output is static so that the CV content is readable by search engines,
+recruiting tools and printers without depending on JavaScript. The remaining
+JS only handles filtering, the theme toggle and the scrollspy.
 
-Usage : python tools/build_site.py
+Usage: python tools/build_site.py
 """
 
 import json
@@ -32,7 +32,7 @@ ICON_STAR = ('<svg viewBox="0 0 24 24" fill="currentColor">'
 
 
 def attr(value):
-    """Échappe une chaîne destinée à un attribut HTML entre guillemets doubles."""
+    """Escape a string meant for a double-quoted HTML attribute."""
     return value.replace("&", "&amp;").replace('"', "&quot;").replace("<", "&lt;")
 
 
@@ -50,17 +50,17 @@ def render_experience(xp, types):
 
     links = []
     if xp.get("url"):
-        links.append(f'<a href="{xp["url"]}" target="_blank" rel="noopener">{ICON_LINK} Voir en ligne</a>')
+        links.append(f'<a href="{xp["url"]}" target="_blank" rel="noopener">{ICON_LINK} Visit site</a>')
     if xp.get("repo"):
-        links.append(f'<a href="{xp["repo"]}" target="_blank" rel="noopener">{ICON_REPO} Code source</a>')
+        links.append(f'<a href="{xp["repo"]}" target="_blank" rel="noopener">{ICON_REPO} Source code</a>')
     if xp.get("demo"):
-        links.append(f'<a href="{xp["demo"]}" target="_blank" rel="noopener">{ICON_PLAY} Démonstration</a>')
+        links.append(f'<a href="{xp["demo"]}" target="_blank" rel="noopener">{ICON_PLAY} Watch demo</a>')
     linkbar = f'\n      <div class="xplinks">{"".join(links)}</div>' if links else ""
 
     verif = ""
     if xp.get("verified"):
         title_attr = f' title="{attr(xp["src"])}"' if xp.get("src") else ""
-        verif = f'\n        <span class="verif"{title_attr}>{ICON_CHECK}Vérifié</span>'
+        verif = f'\n        <span class="verif"{title_attr}>{ICON_CHECK}Verified</span>'
 
     ctx = f'\n      <p class="xpctx">{xp["ctx"]}</p>' if xp.get("ctx") else ""
 
@@ -103,11 +103,11 @@ def render_repo(r):
 
 
 def splice(html, marker, body):
-    """Remplace le contenu entre <!--MARKER:START--> et <!--MARKER:END-->."""
+    """Replace whatever sits between <!--MARKER:START--> and <!--MARKER:END-->."""
     pattern = re.compile(
         rf"(<!--{marker}:START-->).*?(<!--{marker}:END-->)", re.DOTALL)
     if not pattern.search(html):
-        raise SystemExit(f"Marqueur {marker} introuvable dans index.html")
+        raise SystemExit(f"Marker {marker} not found in index.html")
     return pattern.sub(lambda m: f"{m.group(1)}\n{body}\n  {m.group(2)}", html)
 
 
@@ -123,8 +123,8 @@ def main():
 
     starred = sum(1 for x in xps if x.get("star"))
     verified = sum(1 for x in xps if x.get("verified"))
-    print(f"index.html régénéré — {len(xps)} expériences "
-          f"({starred} en sélection, {verified} vérifiées), {len(data['repos'])} dépôts.")
+    print(f"index.html rebuilt — {len(xps)} experiences "
+          f"({starred} selected, {verified} verified), {len(data['repos'])} repositories.")
 
 
 if __name__ == "__main__":

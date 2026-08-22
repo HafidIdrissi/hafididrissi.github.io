@@ -1,64 +1,69 @@
 # hafididrissi.github.io
 
-CV et portfolio de **Hafid Idrissi** — ingénieur logiciel Full-Stack & Cloud.
-En ligne : **[hafididrissi.github.io](https://hafididrissi.github.io/)**
+CV and portfolio of **Hafid Idrissi** — Full-Stack & Cloud software engineer.
+Live at **[hafididrissi.github.io](https://hafididrissi.github.io/)**
 
-## Principe
+## Principle
 
-Le contenu du site est dérivé d'un **CV master audité** (`cv_master_Hafid_IDRISSI.json`, hors dépôt) dont
-chaque entrée porte un statut de validation. Règle de fond, reprise du CV master :
+The site content is derived from an **audited CV master** (`cv_master_Hafid_IDRISSI.json`, kept outside this
+repository) in which every entry carries a validation status. The governing rule, taken from that file:
 
-> Ne jamais inventer, extrapoler ou renforcer un fait absent du fichier source.
-> Ne reprendre un chiffre que s'il figure explicitement dans un élément validé, et conserver son contexte.
+> Never invent, extrapolate or strengthen a fact that is absent from the source file.
+> Only reuse a figure if it appears explicitly in a validated entry, and keep its context.
 
-Les expériences confrontées à une source primaire — dépôt de code, rapport de stage, contrat, diplôme —
-portent la mention **Vérifié** sur le site, avec la source en infobulle.
+Entries checked against a primary source — a code repository, an internship report, a contract, a diploma —
+are marked **Verified** on the site, with the source in a tooltip.
 
-Conformément aux règles du CV master, le site présente **une seule section « Expériences »** : les projets
-personnels, entrepreneuriaux, académiques et de recherche y figurent avec un libellé de type explicite,
-jamais présentés comme des emplois salariés.
+Following the master file's `schema_section_unique` rule, the site presents **a single "Experience" section**:
+personal, entrepreneurial, academic and research projects all appear there with an explicit type label, and
+are never presented as salaried employment.
 
 ## Structure
 
 ```
-index.html            page unique — CSS et JS intégrés, aucune dépendance hors Google Fonts
-data/cv-site.json     source de vérité du contenu (expériences, dépôts, filtres)
-tools/build_site.py   rend data/cv-site.json en HTML statique dans index.html
-assets/pdf/           CV téléchargeable
-assets/*.svg          bannières animées du README de profil GitHub
+index.html            single page — CSS and JS inlined, no dependency beyond Google Fonts
+data/cv-site.json     source of truth for the content (experience, repositories, filters)
+tools/build_site.py   renders data/cv-site.json into static HTML inside index.html
+assets/pdf/           downloadable CV
+assets/*.svg          animated banners for the GitHub profile README
 
-github-profile-README.md          copie de travail du README de github.com/HafidIdrissi/HafidIdrissi
-github-profile-snake-workflow.yml copie de travail de .github/workflows/snake.yml du même dépôt
+github-profile-README.md          working copy of github.com/HafidIdrissi/HafidIdrissi's README
+github-profile-snake-workflow.yml working copy of that repository's .github/workflows/snake.yml
 ```
 
-## Modifier le contenu
+## Editing the content
 
-1. Éditer `data/cv-site.json`.
-2. Régénérer la page :
+1. Edit `data/cv-site.json`.
+2. Rebuild the page:
 
    ```bash
    python tools/build_site.py
    ```
 
-3. Vérifier localement :
+3. Check it locally:
 
    ```bash
    python -m http.server 8777
    # http://127.0.0.1:8777/
    ```
 
-Le rendu est **statique** : le contenu du CV est présent dans le HTML servi, donc lisible par les moteurs
-de recherche, les outils de recrutement et à l'impression. Le JavaScript ne gère que le filtrage des
-expériences, la bascule de thème, les révélations au scroll et le rafraîchissement facultatif du nombre
-d'étoiles GitHub — la page reste complète sans lui.
+Rendering is **static**: the CV content is present in the served HTML, so it is readable by search engines,
+recruiting tools and printers. JavaScript only handles experience filtering, the theme toggle, scroll reveals
+and an optional refresh of the GitHub star counts — the page is complete without it.
 
-## Choix techniques
+## Design decisions
 
-- Page unique, sans framework ni build front-end : rien à installer pour servir le site.
-- Thème clair/sombre suivant les préférences système, avec bascule mémorisée en `localStorage`.
-- Filtres d'expériences par nature — sélection, entreprise, produits, recherche, académique.
-- `prefers-reduced-motion` respecté ; repli `<noscript>` qui affiche tout le contenu.
+- Single page, no framework and no front-end build: nothing to install in order to serve the site.
+- Light and dark themes following the system preference, with the toggle remembered in `localStorage`.
+- Experience filters by nature — selected, industry, products, research, academic.
+- `prefers-reduced-motion` respected, and a `<noscript>` fallback that reveals all content.
+
+## Note on asset paths
+
+GitHub Pages is case-sensitive while Windows is not. The CV is tracked as
+`assets/pdf/Hafid_Idrissi_CV.pdf` — keep that exact casing in any link, or the file 404s in production
+while working fine locally.
 
 ## Licence
 
-Le code de la page est réutilisable ; le contenu du CV, les documents et les visuels personnels ne le sont pas.
+The page code is reusable; the CV content, documents and personal imagery are not.
