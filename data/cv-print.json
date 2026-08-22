@@ -1,0 +1,392 @@
+{
+  "_comment": "Print CV content, derived from cv_master_Hafid_IDRISSI.json (audit of 2026-08-20). Bullets are trimmed versions of the master entries — never add a fact the master does not carry. Rebuild with: python tools/build_cv.py",
+  "contact": {
+    "name": "Hafid Idrissi",
+    "phone": "+33 6 05 59 22 79",
+    "email": "idrissihafez@gmail.com",
+    "site": "hafididrissi.github.io",
+    "linkedin": "linkedin.com/in/hafid-idrissi",
+    "github": "github.com/HafidIdrissi",
+    "orcid": "0009-0000-4326-1487"
+  },
+  "en": {
+    "lang": "en",
+    "title": "Full-Stack & Cloud Software Engineer",
+    "location": "Jouy-en-Josas (78), France — open to France / Europe",
+    "labels": {
+      "profile": "Profile",
+      "skills": "Skills",
+      "experience": "Experience",
+      "education": "Education",
+      "languages": "Languages",
+      "page": "Hafid Idrissi — Full-Stack & Cloud Software Engineer"
+    },
+    "types": {
+      "internship": "Internship",
+      "employment": "Employment",
+      "venture": "Solo venture",
+      "personal": "Personal project",
+      "research": "Research project",
+      "academic": "Academic project"
+    },
+    "profile": "Full-Stack & Cloud software engineer and JUNIA graduate. I design and structure digital solutions end to end, from analysing the need through to deployment, combining TypeScript, React, Python, Azure, Docker and Kubernetes across SaaS products, APIs, IoT systems and applications built on AI. Independent, rigorous and product-minded, I turn complex problems into solutions that are reliable, secure and genuinely usable.",
+    "skills": [
+      {
+        "k": "Languages",
+        "v": "Python · TypeScript · C/C++ · C# · Java · Kotlin · SQL · Bash"
+      },
+      {
+        "k": "Cloud & infra",
+        "v": "Azure (AKS, DevOps) · Terraform · Docker · Kubernetes · CI/CD (GitHub Actions, GitLab, Jenkins) · IaC · Monitoring"
+      },
+      {
+        "k": "Web & data",
+        "v": "React · Next.js · Vite · Node.js · Supabase · PostgreSQL · MongoDB · REST APIs · Stripe"
+      },
+      {
+        "k": "AI & data science",
+        "v": "LLMs (GPT, Claude, Gemini) · Fine-tuning · PyTorch · Hugging Face · OpenCV · NLP · PyMC"
+      },
+      {
+        "k": "Embedded & IoT",
+        "v": "ROS · Raspberry Pi · Arduino · MQTT · Real-time systems · Embedded Linux"
+      }
+    ],
+    "experience": [
+      {
+        "role": "Computer Vision Developer",
+        "org": "Smart Waste Detector with YOLO",
+        "type": "personal",
+        "dates": "Aug 2026",
+        "place": "Remote",
+        "bullets": [
+          "Trained an Ultralytics YOLO model through transfer learning to detect six waste categories: biodegradable, cardboard, glass, metal, paper and plastic.",
+          "Reached mAP50 0.496 and mAP50-95 0.344 after 30 epochs on validation, then analysed the misclassifications caused by domain shift, lighting and class imbalance."
+        ],
+        "tech": "Python · Ultralytics YOLO · PyTorch · Google Colab · Kaggle API"
+      },
+      {
+        "role": "Founder & Full-Stack Engineer",
+        "org": "Influence Persona",
+        "link": "influencepersona.com",
+        "type": "venture",
+        "dates": "May 2026 — Jul 2026",
+        "place": "Remote",
+        "bullets": [
+          "Designed a multimodal SaaS platform single-handedly, covering images, reusable avatars, scene merging, video, lipsync, media library and administration.",
+          "Built a serverless architecture separating a Vite front end from Supabase authentication, PostgreSQL with row level security, storage and fifteen Deno Edge Functions.",
+          "Orchestrated AI workloads across fal.ai, Alexya and EvoLink, with asynchronous video generation tracking, result persistence and credit accounting.",
+          "Implemented credit-pack monetisation through Stripe Checkout, customer portal and webhooks, backed by thirty-three versioned SQL migrations."
+        ],
+        "tech": "Vite · TypeScript · Supabase · Deno Edge Functions · PostgreSQL/RLS · Stripe · fal.ai · Cloudflare Pages"
+      },
+      {
+        "role": "Author of the scientific prototype",
+        "org": "Bayesian state-of-health estimation for Li-ion batteries",
+        "type": "research",
+        "dates": "Apr 2026",
+        "place": "Remote",
+        "bullets": [
+          "Compared two Bayesian approaches to state-of-health estimation: a per-battery model and a hierarchical model pooling information across a simulated fleet.",
+          "Ran NUTS inference with PyMC and NumPyro, posterior predictive checks, and remaining useful life estimation with 90% credible intervals."
+        ],
+        "tech": "Python · PyMC · NumPyro/JAX · ArviZ · NumPy · SciPy",
+        "note": "Simulated dataset inspired by NASA PCoE; not validated on real cells."
+      },
+      {
+        "role": "Designer & Full-Stack Developer",
+        "org": "CheckAI",
+        "link": "checkai-app.com",
+        "type": "personal",
+        "dates": "Nov 2025 — Apr 2026",
+        "place": "Remote",
+        "bullets": [
+          "Built a serverless SaaS on React/Vite and Netlify Functions, separating the detection, billing, session management and account deletion responsibilities.",
+          "Integrated a RoBERTa inference pipeline through Hugging Face, normalising the score into a usable probability and handling model downtime.",
+          "Gated every analysis on Supabase profiles, credits and quotas, and implemented the Stripe subscription, customer portal and webhook synchronisation."
+        ],
+        "tech": "React · Vite · Netlify Functions · Supabase · PostgreSQL · Stripe · Hugging Face"
+      },
+      {
+        "role": "Designer & Front-End Developer",
+        "org": "GoEditPDF",
+        "link": "goeditpdf.com",
+        "type": "personal",
+        "dates": "Dec 2025 — Feb 2026",
+        "place": "Remote",
+        "bullets": [
+          "Designed a privacy-by-design architecture running all PDF processing in the browser, with no document transfer to an application server.",
+          "Built a complete manipulation chain — merge, reorder, rotate, extract, annotate, sign, watermark, redact — assembling PDF.js, PDF-Lib, Fabric.js and Tesseract.js for local OCR.",
+          "Shipped in French, English and Spanish with responsive layouts, help flows and tutorials."
+        ],
+        "tech": "JavaScript · PDF.js · PDF-Lib · Fabric.js · Tesseract.js"
+      },
+      {
+        "role": "Sales assistant",
+        "org": "Inditex (Zara)",
+        "type": "employment",
+        "dates": "Aug 2025 — Sep 2025",
+        "place": "Le Chesnay-Rocquencourt (78), France",
+        "bullets": [
+          "Customer service under sustained footfall, working to Inditex brand standards and handling returns and complaints."
+        ],
+        "tech": "",
+        "note": "Transitional employment after graduating, alongside the development of personal technical projects."
+      },
+      {
+        "role": "General assistant",
+        "org": "Auchan Retail",
+        "type": "employment",
+        "dates": "Jul 2025 — Aug 2025",
+        "place": "France",
+        "bullets": [
+          "Aisle, checkout and restocking duties in a high-traffic hypermarket, under strict traceability, hygiene and stock rotation processes."
+        ],
+        "tech": ""
+      },
+      {
+        "role": "Final-year intern — Cloud & IoT architecture (AKS proof of concept)",
+        "org": "Hager Group",
+        "type": "internship",
+        "dates": "Apr 2024 — Oct 2024",
+        "place": "Obernai (67), France",
+        "bullets": [
+          "Owned end to end an Azure proof of concept assessing the secure deployment of IoT services on Azure Kubernetes Service over a private network.",
+          "Designed a private Azure architecture split across three virtual networks, using VNet Peering and Private Endpoints to secure traffic between AKS, virtual machines and Azure SQL.",
+          "Containerised and orchestrated .NET IoT APIs with Docker, Docker Compose and Kubernetes; added health checks and resolved Azure SQL connectivity issues.",
+          "Worked around an ARM64 incompatibility in the Docker images with a compatible builder, an AMD64 node suited to the workloads and cluster autoscaling.",
+          "Produced a monthly cost estimate for the target architecture, stating the assumptions, limits and items still to refine."
+        ],
+        "tech": "Azure · AKS · Kubernetes · Docker · Azure SQL · VNet Peering · Private Endpoints · Azure DevOps · .NET Core · Databricks · Azure OpenAI"
+      },
+      {
+        "role": "Academic support tutor",
+        "org": "JUNIA",
+        "type": "employment",
+        "dates": "Oct 2023 — Jun 2024",
+        "place": "Lille, France",
+        "bullets": [
+          "Tutored secondary and high school students under a regional academic-success and widening-access scheme backed by the Hauts-de-France Regional Council; part-time contract capped at 160 hours."
+        ],
+        "tech": ""
+      },
+      {
+        "role": "R&D intern — Embedded systems, SLAM & operator HMI",
+        "org": "Mirion Technologies",
+        "type": "internship",
+        "dates": "Jun 2023 — Aug 2023",
+        "place": "France",
+        "bullets": [
+          "Designed and validated an embedded real-time 2D mapping prototype end to end, from requirements analysis through SLAM solution selection to functional testing.",
+          "Built the ROS Noetic / Python architecture around an RPLIDAR A1M8, an HWT905 orientation sensor and Hector SLAM, with real-time data flow over ROS topics and RViz visualisation.",
+          "Wrote a Python/Tkinter HMI automating LiDAR and SLAM startup, live map display and map saving, reducing the room for operator error.",
+          "Called the migration from a Raspberry Pi 4 to an Intel N100 mini-PC after identifying an incompatibility with the required ROS version."
+        ],
+        "tech": "ROS Noetic · Python · Hector SLAM · LiDAR RPLIDAR A1M8 · RViz · Raspberry Pi · Embedded Linux"
+      }
+    ],
+    "education": {
+      "degree": "Diplôme d'ingénieur — French engineering degree, master's grade",
+      "school": "JUNIA — École des Hautes Études d'Ingénieur (HEI)",
+      "place": "Lille, France",
+      "dates": "2019 — 2024",
+      "notes": "Awarded for the 2023/2024 academic year on 21 November 2024. Declared track: Computer Science and Information Technology."
+    },
+    "languages": "French — native · English — professional",
+    "footnote": "Every entry above is backed by a primary source: a code repository, an internship report, a contract or a diploma.",
+    "other": {
+      "k": "Other projects",
+      "v": "LexiNegotiate — Gemini hackathon prototype for contract analysis · HuntFlow — ATS/CRM, in progress · EyeGuard — connected-door prototype, embedded OpenCV + Android + MQTT · Devis BTP — AI-assisted construction quoting · EmailTrack — email open tracking (API, dashboard, Chrome extension)"
+    }
+  },
+  "fr": {
+    "lang": "fr",
+    "title": "Ingénieur logiciel Full-Stack & Cloud",
+    "location": "Jouy-en-Josas (78) — mobilité France / Europe",
+    "labels": {
+      "profile": "Profil",
+      "skills": "Compétences",
+      "experience": "Expériences",
+      "education": "Formation",
+      "languages": "Langues",
+      "page": "Hafid Idrissi — Ingénieur logiciel Full-Stack & Cloud"
+    },
+    "types": {
+      "internship": "Stage",
+      "employment": "Emploi",
+      "venture": "Projet entrepreneurial",
+      "personal": "Projet personnel",
+      "research": "Projet de recherche",
+      "academic": "Projet académique"
+    },
+    "profile": "Ingénieur logiciel Full-Stack & Cloud diplômé de JUNIA, je conçois et structure des solutions numériques de bout en bout, de l'analyse du besoin au déploiement, en associant TypeScript, React, Python, Azure, Docker et Kubernetes sur des produits SaaS, des API, des systèmes IoT et des applications intégrant l'IA. Autonome, rigoureux et orienté produit, je transforme des problématiques complexes en solutions fiables, sécurisées et directement exploitables.",
+    "skills": [
+      {
+        "k": "Langages",
+        "v": "Python · TypeScript · C/C++ · C# · Java · Kotlin · SQL · Bash"
+      },
+      {
+        "k": "Cloud & infra",
+        "v": "Azure (AKS, DevOps) · Terraform · Docker · Kubernetes · CI/CD (GitHub Actions, GitLab, Jenkins) · IaC · Monitoring"
+      },
+      {
+        "k": "Web & données",
+        "v": "React · Next.js · Vite · Node.js · Supabase · PostgreSQL · MongoDB · API REST · Stripe"
+      },
+      {
+        "k": "IA & data science",
+        "v": "LLMs (GPT, Claude, Gemini) · Fine-tuning · PyTorch · Hugging Face · OpenCV · NLP · PyMC"
+      },
+      {
+        "k": "Embarqué & IoT",
+        "v": "ROS · Raspberry Pi · Arduino · MQTT · Temps réel · Linux embarqué"
+      }
+    ],
+    "experience": [
+      {
+        "role": "Développeur Computer Vision",
+        "org": "Smart Waste Detector with YOLO",
+        "type": "personal",
+        "dates": "Août 2026",
+        "place": "À distance",
+        "bullets": [
+          "Entraîné, par transfert d'apprentissage, un modèle Ultralytics YOLO pour détecter six catégories de déchets : biodégradable, carton, verre, métal, papier et plastique.",
+          "Atteint un mAP50 de 0,496 et un mAP50-95 de 0,344 après 30 époques sur l'ensemble de validation, puis analysé les erreurs liées au décalage de domaine, à l'éclairage et au déséquilibre entre classes."
+        ],
+        "tech": "Python · Ultralytics YOLO · PyTorch · Google Colab · Kaggle API"
+      },
+      {
+        "role": "Fondateur & Ingénieur Full-Stack",
+        "org": "Influence Persona",
+        "link": "influencepersona.com",
+        "type": "venture",
+        "dates": "Mai 2026 — Juil. 2026",
+        "place": "À distance",
+        "bullets": [
+          "Piloté en autonomie la conception d'une plateforme SaaS multimodale couvrant images, avatars réutilisables, fusion de scènes, vidéo, lipsync, médiathèque et administration.",
+          "Défini une architecture serverless séparant un frontend Vite des services Supabase : authentification, PostgreSQL avec Row Level Security, stockage et quinze Edge Functions Deno.",
+          "Conçu l'orchestration multi-fournisseurs des traitements IA via fal.ai, Alexya et EvoLink, avec suivi asynchrone des générations vidéo, persistance des résultats et gestion des crédits.",
+          "Structuré la monétisation autour de packs de crédits et des parcours Stripe Checkout, portail client et webhooks, soutenus par trente-trois migrations SQL versionnées."
+        ],
+        "tech": "Vite · TypeScript · Supabase · Edge Functions Deno · PostgreSQL/RLS · Stripe · fal.ai · Cloudflare Pages"
+      },
+      {
+        "role": "Concepteur du prototype scientifique",
+        "org": "Estimation bayésienne du SOH de batteries Li-ion",
+        "type": "research",
+        "dates": "Avr. 2026",
+        "place": "À distance",
+        "bullets": [
+          "Comparé deux approches bayésiennes d'estimation du State of Health : un modèle individuel par batterie et un modèle hiérarchique exploitant l'information partagée à l'échelle d'une flotte simulée.",
+          "Conduit l'inférence NUTS avec PyMC et NumPyro, les contrôles prédictifs a posteriori et l'estimation de la durée de vie résiduelle avec intervalles crédibles à 90 %."
+        ],
+        "tech": "Python · PyMC · NumPyro/JAX · ArviZ · NumPy · SciPy",
+        "note": "Jeu de données simulé inspiré des données NASA PCoE ; non validé sur cellules réelles."
+      },
+      {
+        "role": "Concepteur & Développeur Full-Stack",
+        "org": "CheckAI",
+        "link": "checkai-app.com",
+        "type": "personal",
+        "dates": "Nov. 2025 — Avr. 2026",
+        "place": "À distance",
+        "bullets": [
+          "Conçu une architecture SaaS serverless sous React/Vite et Netlify Functions, séparant détection, facturation, gestion de session et suppression de compte.",
+          "Intégré un pipeline d'inférence RoBERTa via Hugging Face, avec normalisation du score en probabilité exploitable et gestion des indisponibilités du modèle.",
+          "Conditionné chaque analyse aux profils, crédits et quotas Supabase, et implémenté le cycle Stripe — souscription, portail client et synchronisation par webhook."
+        ],
+        "tech": "React · Vite · Netlify Functions · Supabase · PostgreSQL · Stripe · Hugging Face"
+      },
+      {
+        "role": "Concepteur & Développeur Front-End",
+        "org": "GoEditPDF",
+        "link": "goeditpdf.com",
+        "type": "personal",
+        "dates": "Déc. 2025 — Fév. 2026",
+        "place": "À distance",
+        "bullets": [
+          "Conçu une architecture privacy-by-design exécutant l'intégralité des traitements PDF dans le navigateur, sans transfert des documents vers un serveur applicatif.",
+          "Développé une chaîne complète — fusion, réorganisation, rotation, extraction, annotation, signature, filigrane, caviardage — en assemblant PDF.js, PDF-Lib, Fabric.js et Tesseract.js pour l'OCR local.",
+          "Livré le produit en français, anglais et espagnol, avec adaptation responsive, parcours d'aide et tutoriels."
+        ],
+        "tech": "JavaScript · PDF.js · PDF-Lib · Fabric.js · Tesseract.js"
+      },
+      {
+        "role": "Vendeur",
+        "org": "Inditex (Zara)",
+        "type": "employment",
+        "dates": "Août 2025 — Sept. 2025",
+        "place": "Le Chesnay-Rocquencourt (78)",
+        "bullets": [
+          "Assuré la relation client en boutique sur un flux soutenu, aux standards de marque Inditex, en gérant retours et réclamations."
+        ],
+        "tech": "",
+        "note": "Emploi de transition après la fin d'études, mené en parallèle du développement de projets techniques personnels."
+      },
+      {
+        "role": "Employé polyvalent",
+        "org": "Auchan Retail",
+        "type": "employment",
+        "dates": "Juil. 2025 — Août 2025",
+        "place": "France",
+        "bullets": [
+          "Polyvalence rayon, caisse et mise en rayon sur un hypermarché à fort trafic, dans le respect de process stricts de traçabilité, d'hygiène et de rotation des stocks."
+        ],
+        "tech": ""
+      },
+      {
+        "role": "Stagiaire PFE — Architecture Cloud & IoT (PoC AKS)",
+        "org": "Hager Group",
+        "type": "internship",
+        "dates": "Avr. 2024 — Oct. 2024",
+        "place": "Obernai (67), France",
+        "bullets": [
+          "Pris en charge de bout en bout un PoC Azure évaluant le déploiement sécurisé de services IoT sur Azure Kubernetes Service, en réseau privé.",
+          "Défini une architecture Azure privée segmentée en trois réseaux virtuels, avec VNet Peering et Private Endpoint, sécurisant les communications entre AKS, machines virtuelles et Azure SQL.",
+          "Conteneurisé et orchestré des API IoT .NET avec Docker, Docker Compose et Kubernetes ; intégré des contrôles de santé et résolu les problématiques de connexion à Azure SQL.",
+          "Remédié à une incompatibilité ARM64 des images Docker par un builder compatible, un nœud AMD64 adapté aux workloads et l'autoscaling du cluster.",
+          "Établi un chiffrage mensuel de l'architecture cible, en formalisant les hypothèses, limites et postes restant à affiner."
+        ],
+        "tech": "Azure · AKS · Kubernetes · Docker · Azure SQL · VNet Peering · Private Endpoints · Azure DevOps · .NET Core · Databricks · Azure OpenAI"
+      },
+      {
+        "role": "Tuteur en soutien pédagogique",
+        "org": "JUNIA",
+        "type": "employment",
+        "dates": "Oct. 2023 — Juin 2024",
+        "place": "Lille, France",
+        "bullets": [
+          "Accompagné des collégiens et lycéens dans un dispositif de réussite scolaire et de démocratisation de l'enseignement supérieur soutenu par le Conseil régional des Hauts-de-France ; contrat à temps partiel plafonné à 160 heures."
+        ],
+        "tech": ""
+      },
+      {
+        "role": "Stagiaire R&D — Systèmes embarqués, SLAM & IHM",
+        "org": "Mirion Technologies",
+        "type": "internship",
+        "dates": "Juin 2023 — Août 2023",
+        "place": "France",
+        "bullets": [
+          "Conçu et validé de bout en bout un prototype embarqué de cartographie 2D en temps réel, de l'analyse des besoins au choix de la solution SLAM et aux tests fonctionnels.",
+          "Défini l'architecture ROS Noetic / Python intégrant un LiDAR RPLIDAR A1M8, un capteur d'orientation HWT905 et Hector SLAM, avec échanges temps réel par topics ROS et visualisation RViz.",
+          "Développé une IHM Python/Tkinter automatisant le lancement des opérations LiDAR et SLAM, la visualisation de la cartographie et l'enregistrement des cartes, limitant les erreurs opérateur.",
+          "Arbitré la migration du Raspberry Pi 4 vers un mini-PC Intel N100 après identification d'une incompatibilité avec la version de ROS requise."
+        ],
+        "tech": "ROS Noetic · Python · Hector SLAM · LiDAR RPLIDAR A1M8 · RViz · Raspberry Pi · Linux embarqué"
+      }
+    ],
+    "education": {
+      "degree": "Diplôme d'ingénieur — grade de master",
+      "school": "JUNIA — École des Hautes Études d'Ingénieur (HEI)",
+      "place": "Lille, France",
+      "dates": "2019 — 2024",
+      "notes": "Délivré au titre de l'année universitaire 2023/2024, le 21 novembre 2024. Parcours déclaré : Informatique et Technologies de l'Information."
+    },
+    "languages": "Français — natif · Anglais — professionnel",
+    "footnote": "Chaque expérience ci-dessus est adossée à une source primaire : dépôt de code, rapport de stage, contrat ou diplôme.",
+    "other": {
+      "k": "Autres projets",
+      "v": "LexiNegotiate — prototype de hackathon Gemini pour l'analyse de contrats · HuntFlow — ATS/CRM, en cours · EyeGuard — porte connectée, OpenCV embarqué + Android + MQTT · Devis BTP — devis chantier assisté par IA · EmailTrack — suivi d'ouverture d'e-mails (API, dashboard, extension Chrome)"
+    }
+  }
+}

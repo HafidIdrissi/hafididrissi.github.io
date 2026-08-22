@@ -22,9 +22,11 @@ are never presented as salaried employment.
 
 ```
 index.html            single page — CSS and JS inlined, no dependency beyond Google Fonts
-data/cv-site.json     source of truth for the content (experience, repositories, filters)
+data/cv-site.json     source of truth for the web page (experience, repositories, filters)
+data/cv-print.json    source of truth for the print CV, English and French
 tools/build_site.py   renders data/cv-site.json into static HTML inside index.html
-assets/pdf/           downloadable CV
+tools/build_cv.py     renders data/cv-print.json into the PDF CVs
+assets/pdf/           generated CVs — do not edit by hand
 assets/*.svg          animated banners for the GitHub profile README
 
 github-profile-README.md          working copy of github.com/HafidIdrissi/HafidIdrissi's README
@@ -50,6 +52,23 @@ github-profile-snake-workflow.yml working copy of that repository's .github/work
 Rendering is **static**: the CV content is present in the served HTML, so it is readable by search engines,
 recruiting tools and printers. JavaScript only handles experience filtering, the theme toggle, scroll reveals
 and an optional refresh of the GitHub star counts — the page is complete without it.
+
+## Rebuilding the CV PDFs
+
+`data/cv-print.json` holds a trimmed selection of the master entries, in English and French.
+
+```bash
+python tools/build_cv.py        # both languages
+python tools/build_cv.py en     # one language
+```
+
+The CV is laid out as a single column so applicant tracking systems can parse it, and rendered
+through headless Chrome so the text stays selectable rather than becoming an image. The script
+prints the resulting page count — keep it at two pages; if it grows, trim bullets in the JSON
+rather than shrinking the type further.
+
+Experience is a single reverse-chronological section with an explicit type label on every entry,
+so personal, entrepreneurial, academic and research work is never mistaken for salaried employment.
 
 ## Design decisions
 
