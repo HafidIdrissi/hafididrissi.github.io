@@ -356,8 +356,48 @@
   ],
   "selected_work": [
     {
-      "experience": "hager",
+      "experience": "goeditpdf",
       "number": "01",
+      "discipline": "Privacy by design",
+      "flow": [
+        "Your PDF",
+        "Browser",
+        "Edited PDF"
+      ],
+      "caption": "Actual interface / Sample document",
+      "stage": "Independent product",
+      "highlight": "PDF editing and local OCR. Three languages. Documents stay in the browser.",
+      "subtitle": "Useful document tools, without file uploads",
+      "challenge": "Let people edit and process PDFs without sending their documents to an application server.",
+      "contribution": "Combined PDF.js, PDF-Lib, Fabric.js and local OCR into one responsive editing environment.",
+      "result": "Merge, annotation, signing and OCR workflows, with an interface in English, French and Spanish.",
+      "preview": "assets/products/goeditpdf.jpg",
+      "preview_alt": "GoEditPDF editor with a synthetic sample document",
+      "preview_height": 960
+    },
+    {
+      "experience": "checkai",
+      "number": "02",
+      "discipline": "Full-stack product",
+      "flow": [
+        "React",
+        "Functions",
+        "Services"
+      ],
+      "caption": "Actual interface / Public product page",
+      "stage": "Independent SaaS",
+      "highlight": "The whole application: AI inference, accounts, usage limits and subscription billing.",
+      "subtitle": "Beyond an AI model: a complete application",
+      "challenge": "Build the account, usage and billing flows around a text classification model.",
+      "contribution": "Connected React, Netlify Functions, Supabase and Stripe; implemented inference and model-downtime handling.",
+      "result": "An application covering analysis entitlements, saved results and subscription webhooks, with build validation in CI.",
+      "preview": "assets/products/checkai.jpg",
+      "preview_alt": "CheckAI public text analysis product page",
+      "preview_height": 600
+    },
+    {
+      "experience": "hager",
+      "number": "03",
       "discipline": "Cloud architecture",
       "flow": [
         "IoT APIs",
@@ -371,40 +411,6 @@
       "challenge": "Assess whether existing IoT APIs could run securely on Azure Kubernetes Service within a private network.",
       "contribution": "Designed a three-VNet architecture, containerised .NET APIs and resolved connectivity and CPU architecture issues.",
       "result": "A working proof of concept, validation testing and a monthly cost estimate with explicit assumptions."
-    },
-    {
-      "experience": "checkai",
-      "number": "02",
-      "discipline": "Full-stack product",
-      "flow": [
-        "React",
-        "Functions",
-        "Services"
-      ],
-      "caption": "Authentication · Inference · Billing",
-      "stage": "Independent SaaS",
-      "highlight": "The whole application: AI inference, accounts, usage limits and subscription billing.",
-      "subtitle": "Beyond an AI model: a complete application",
-      "challenge": "Build the account, usage and billing flows around a text classification model.",
-      "contribution": "Connected React, Netlify Functions, Supabase and Stripe; implemented inference and model-downtime handling.",
-      "result": "An application covering analysis entitlements, saved results and subscription webhooks, with build validation in CI."
-    },
-    {
-      "experience": "goeditpdf",
-      "number": "03",
-      "discipline": "Privacy by design",
-      "flow": [
-        "Your PDF",
-        "Browser",
-        "Edited PDF"
-      ],
-      "caption": "Document processing stays in the browser",
-      "stage": "Independent product",
-      "highlight": "PDF editing and local OCR. Three languages. Documents stay in the browser.",
-      "subtitle": "Useful document tools, without file uploads",
-      "challenge": "Let people edit and process PDFs without sending their documents to an application server.",
-      "contribution": "Combined PDF.js, PDF-Lib, Fabric.js and local OCR into one responsive editing environment.",
-      "result": "Merge, annotation, signing and OCR workflows, with an interface in English, French and Spanish."
     }
   ],
   "featured_repos": [

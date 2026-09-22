@@ -1,15 +1,13 @@
 /* Progressive enhancement: the complete portfolio is readable without JavaScript. */
 const root = document.documentElement;
 const themeButton = document.getElementById('theme');
-const systemTheme = matchMedia('(prefers-color-scheme: dark)');
-const currentTheme = () => root.dataset.theme || (systemTheme.matches ? 'dark' : 'light');
+const currentTheme = () => root.dataset.theme || 'dark';
 function updateThemeLabel() {
   themeButton.setAttribute('aria-label', `Switch to ${currentTheme() === 'dark' ? 'light' : 'dark'} theme`);
-  document.querySelector('meta[name="theme-color"]').content = currentTheme() === 'dark' ? '#141c19' : '#f6f5f0';
+  document.querySelector('meta[name="theme-color"]').content = currentTheme() === 'dark' ? '#101313' : '#f5f5ef';
 }
 themeButton.hidden = false;
 updateThemeLabel();
-systemTheme.addEventListener('change', updateThemeLabel);
 themeButton.addEventListener('click', () => {
   root.dataset.theme = currentTheme() === 'dark' ? 'light' : 'dark';
   try { localStorage.setItem('hi-theme', root.dataset.theme); } catch (_) {}
@@ -74,6 +72,41 @@ motionButton.addEventListener('click', () => {
   updateMotion();
 });
 reducedMotion.addEventListener('change', updateMotion);
+
+// A deliberate selection, with no timer or automatic carousel to interrupt reading.
+const previews = {
+  pdf: { image: 'goeditpdf.jpg', name: 'GoEditPDF', domain: 'goeditpdf.com', url: 'https://goeditpdf.com/', description: 'Browser-based PDF editing & local OCR', tag: 'Your documents. Your device.', alt: 'Explore GoEditPDF: the browser-based editor with a synthetic sample document.' },
+  persona: { image: 'persona.jpg', name: 'Influence Persona', domain: 'influencepersona.com', url: 'https://influencepersona.com/', description: 'An AI content studio, built end to end', tag: 'From concept to content.', alt: 'Explore Influence Persona: its public product page with AI avatar examples.' },
+  tracker: { image: 'tracker.jpg', name: 'Local Time Tracker', domain: 'github.com / Time-Tracker', url: 'https://github.com/HafidIdrissi/Time-Tracker', description: 'Automatic activity tracking. Local data.', tag: 'Local data. Offline reports.', alt: 'Explore Local Time Tracker: the desktop dashboard with repository sample data.' }
+};
+const switcher = document.querySelector('.product-switcher');
+const previewImage = document.getElementById('preview-image');
+const previewLink = document.getElementById('hero-preview');
+switcher.hidden = false;
+let selectionVersion = 0;
+switcher.addEventListener('click', async event => {
+  const button = event.target.closest('button[data-preview]');
+  if (!button) return;
+  const version = ++selectionVersion;
+  if (button.getAttribute('aria-pressed') === 'true') return;
+  const product = previews[button.dataset.preview];
+  const preload = new Image();
+  preload.src = `assets/products/${product.image}`;
+  try { await preload.decode(); } catch (_) { return; }
+  if (version !== selectionVersion) return;
+  previewImage.src = preload.src;
+  previewImage.alt = product.alt;
+  previewLink.href = product.url;
+  document.getElementById('preview-domain').textContent = product.domain;
+  document.getElementById('preview-caption').replaceChildren(
+    Object.assign(document.createElement('strong'), { textContent: product.name }),
+    Object.assign(document.createElement('span'), { textContent: product.description })
+  );
+  document.getElementById('preview-tag').lastChild.textContent = ` ${product.tag}`;
+  document.querySelector('.product-deck').dataset.product = button.dataset.preview;
+  switcher.querySelectorAll('button').forEach(item => item.setAttribute('aria-pressed', String(item === button)));
+  if (motionEnabled()) previewImage.animate([{ opacity: .35, transform: 'scale(1.025)' }, { opacity: 1, transform: 'scale(1)' }], { duration: 420, easing: 'ease-out' });
+});
 
 // Elements remain visible if JavaScript or the observer is unavailable.
 if ('IntersectionObserver' in window) {
