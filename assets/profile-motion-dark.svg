@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="400" viewBox="0 0 1200 400" role="img" aria-labelledby="title">
+      <title id="title">Hafid Idrissi. Full-stack and cloud engineer. Hager, Mirion and JUNIA.</title><style>
+      text{font-family:Arial,Helvetica,sans-serif;fill:#edf0e7}
+      .muted{fill:#b0bcb0}.accent{fill:#f39b76}.line{stroke:#364339;fill:none}
+      .panel{fill:#202c25;stroke:#364339}.paper{fill:#141c19;stroke:#364339}
+      .flow{fill:none;stroke:#f39b76;stroke-width:2;stroke-dasharray:6 14;animation:flow 4s linear infinite}
+      .float{animation:float 6s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+      .late{animation-delay:-3s}.orbit{animation:orbit 30s linear infinite;transform-origin:970px 165px}
+      .bar{transform-box:fill-box;transform-origin:bottom;animation:bar 4s ease-in-out infinite}
+      .scan{animation:scan 5s ease-in-out infinite}.breathe{animation:breathe 5s ease-in-out infinite}
+      @keyframes flow{to{stroke-dashoffset:-80}}
+      @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+      @keyframes orbit{to{transform:rotate(360deg)}}
+      @keyframes bar{0%,100%{transform:scaleY(.55)}50%{transform:scaleY(1)}}
+      @keyframes scan{0%,100%{transform:translateY(0);opacity:.45}50%{transform:translateY(44px);opacity:1}}
+      @keyframes breathe{0%,100%{opacity:.45}50%{opacity:1}}
+      @media(prefers-reduced-motion:reduce){*{animation:none!important}}
+      
+    </style>
+      <rect width="1200" height="400" rx="12" fill="#141c19"/>
+      <circle class="accent breathe" cx="60" cy="54" r="4"/>
+      <text x="77" y="59" font-size="12" letter-spacing="2.3" class="muted">FULL-STACK &amp; CLOUD ENGINEER</text>
+      <text x="55" y="152" font-size="76" font-weight="600" letter-spacing="-3.5">Hafid Idrissi<tspan class="accent">.</tspan></text>
+      <text x="59" y="200" font-size="26" class="muted">Ideas into products. Code into systems.</text>
+      <g font-size="13"><rect class="panel" x="58" y="232" width="89" height="32" rx="16"/><text x="80" y="253">Python</text>
+      <rect class="panel" x="157" y="232" width="115" height="32" rx="16"/><text x="177" y="253">TypeScript</text>
+      <rect class="panel" x="282" y="232" width="82" height="32" rx="16"/><text x="305" y="253">Azure</text>
+      <rect class="panel" x="374" y="232" width="112" height="32" rx="16"/><text x="391" y="253">Kubernetes</text></g>
+      <g opacity=".65"><circle class="line" cx="970" cy="165" r="113"/><circle class="line" cx="970" cy="165" r="77"/>
+      <g class="orbit"><circle cx="970" cy="165" r="113" fill="none" stroke="#f39b76" stroke-width="1.5" stroke-dasharray="36 674"/>
+      <circle cx="1083" cy="165" r="4" fill="#f39b76"/></g></g>
+      <path class="flow" d="M813 189H916Q930 189 930 174V165H970M970 165V90M970 165H1060V244"/>
+      <circle cx="970" cy="165" r="39" fill="#202c25" stroke="#364339"/>
+      <text x="949" y="179" font-size="39" font-weight="bold" letter-spacing="-3">hi<tspan class="accent">.</tspan></text>
+      <g class="float"><rect class="paper" x="861" y="52" width="167" height="42" rx="8"/>
+      <circle cx="882" cy="73" r="4" fill="#f39b76"/><text x="898" y="78" font-size="13">Product thinking</text></g>
+      <g class="float late"><rect class="paper" x="755" y="169" width="129" height="42" rx="8"/>
+      <text x="776" y="195" font-size="13">Clean APIs</text></g>
+      <g class="float"><rect class="paper" x="980" y="238" width="159" height="42" rx="8"/>
+      <text x="1002" y="264" font-size="13">Cloud systems</text></g>
+      <path class="line" d="M58 308H1142"/>
+      <g font-size="12"><text x="58" y="341">HAGER GROUP<tspan class="muted" x="58" dy="20">Cloud &amp; IoT internship</tspan></text>
+      <text x="452" y="341">MIRION TECHNOLOGIES<tspan class="muted" x="452" dy="20">Embedded R&amp;D internship</tspan></text>
+      <text x="927" y="341">JUNIA / HEI<tspan class="muted" x="927" dy="20">Engineering degree · 2024</tspan></text></g>
+    </svg>

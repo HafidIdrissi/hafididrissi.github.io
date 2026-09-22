@@ -100,14 +100,15 @@ def render_work(work, experiences):
                       for label, key in [("The challenge", "challenge"), ("My contribution", "contribution"), ("The result", "result")])
     extra = (f'<a class="text-link" href="{attr(xp["repo"])}" target="_blank" rel="noopener">Source code ↗</a>'
              if xp.get("repo") else "")
-    return f'''<article class="work-card">
+    return f'''<article class="work-card" data-project="{xp['id']}">
       <div class="work-visual">
         <div class="visual-label"><span>{escape(work["discipline"])}</span><span>{escape(work["number"])}</span></div>
         <div class="diagram-flow" aria-label="{escape(' to '.join(work['flow']), quote=True)}">{nodes}</div>
         <p class="visual-caption">{escape(work["caption"])}</p>
       </div>
       <div class="work-body"><p class="work-type">{escape(work["stage"])}</p><h3>{xp["org"]}</h3>
-        <p class="work-subtitle">{escape(work["subtitle"])}</p><dl>{details}</dl>
+        <p class="work-subtitle">{escape(work["highlight"])}</p>
+        <details class="case-study"><summary>Behind the build <span aria-hidden="true">+</span></summary><dl>{details}</dl></details>
         <div class="work-links"><a class="text-link" href="#xp-{xp["id"]}">Technical details <span aria-hidden="true">↗</span></a>{extra}</div>
       </div>
     </article>'''

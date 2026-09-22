@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="200" viewBox="0 0 560 200" role="img" aria-labelledby="title">
+      <title id="title">CheckAI: application, API and backend services</title><style>
+      text{font-family:Arial,Helvetica,sans-serif;fill:#202b27}
+      .muted{fill:#59635b}.accent{fill:#b84628}.line{stroke:#d9ddd3;fill:none}
+      .panel{fill:#ecefe7;stroke:#d9ddd3}.paper{fill:#f6f5f0;stroke:#d9ddd3}
+      .flow{fill:none;stroke:#b84628;stroke-width:2;stroke-dasharray:6 14;animation:flow 4s linear infinite}
+      .float{animation:float 6s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+      .late{animation-delay:-3s}.orbit{animation:orbit 30s linear infinite;transform-origin:970px 165px}
+      .bar{transform-box:fill-box;transform-origin:bottom;animation:bar 4s ease-in-out infinite}
+      .scan{animation:scan 5s ease-in-out infinite}.breathe{animation:breathe 5s ease-in-out infinite}
+      @keyframes flow{to{stroke-dashoffset:-80}}
+      @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+      @keyframes orbit{to{transform:rotate(360deg)}}
+      @keyframes bar{0%,100%{transform:scaleY(.55)}50%{transform:scaleY(1)}}
+      @keyframes scan{0%,100%{transform:translateY(0);opacity:.45}50%{transform:translateY(44px);opacity:1}}
+      @keyframes breathe{0%,100%{opacity:.45}50%{opacity:1}}
+      @media(prefers-reduced-motion:reduce){*{animation:none!important}}
+      
+    </style>
+      <rect width="560" height="200" rx="12" fill="#f6f5f0"/>
+        <path class="flow" d="M169 92H250M319 92H365V49H410M365 92H410M365 92V139H410"/>
+        <rect class="paper" x="37" y="39" width="132" height="108" rx="8"/>
+        <path d="M56 65h85m-85 17h70m-70 17h80" stroke="#d9ddd3" stroke-width="5" stroke-linecap="round"/>
+        <rect class="breathe" x="57" y="114" width="64" height="13" rx="4" fill="#b84628"/>
+        <g class="float"><rect class="panel" x="245" y="56" width="77" height="73" rx="12"/><text x="284" y="100" font-size="24" text-anchor="middle">API</text></g>
+        <rect class="paper" x="410" y="32" width="111" height="33" rx="6"/><rect class="paper" x="410" y="77" width="111" height="33" rx="6"/><rect class="paper" x="410" y="123" width="111" height="33" rx="6"/>
+        <g text-anchor="middle" font-size="11"><text x="465" y="53">Auth &amp; data</text><text x="465" y="98">Inference</text><text x="465" y="144">Billing</text></g></svg>

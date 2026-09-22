@@ -53,7 +53,7 @@
       "src": "Verified against a primary source: professional internship report"
     },
     {
-      "id": "persona", "group": "produit", "star": true, "type": "entrep",
+      "id": "persona", "group": "produit", "star": false, "type": "entrep",
       "role": "Founder &amp; Full-Stack Engineer",
       "org": "Influence Persona", "url": "https://influencepersona.com/", "place": "Remote",
       "dates": "May 2026 — Jul 2026", "verified": true,
@@ -101,7 +101,7 @@
       "src": "Verified against a primary source: repositories smartpdf and goeditpdf-public — 40 commits"
     },
     {
-      "id": "soh", "group": "recherche", "star": true, "type": "recherche",
+      "id": "soh", "group": "recherche", "star": false, "type": "recherche",
       "role": "Author of the scientific prototype",
       "org": "Bayesian state-of-health estimation for Li-ion batteries", "place": "Remote",
       "dates": "Apr 2026", "verified": true,
@@ -117,7 +117,7 @@
       "src": "Verified against a primary source: public repository bayesian-soh-batteries — simulated data, not validated on real cells"
     },
     {
-      "id": "lexi", "group": "produit", "star": true, "type": "perso",
+      "id": "lexi", "group": "produit", "star": false, "type": "perso",
       "role": "Designer &amp; AI Front-End Developer",
       "org": "LexiNegotiate — hackathon prototype", "place": "Remote",
       "dates": "Feb 2026 — Mar 2026", "verified": true,
@@ -134,7 +134,7 @@
       "src": "Verified against a primary source: public repository LexiNegotiate- — on-screen statistics are simulated for the demo"
     },
     {
-      "id": "eyeguard", "group": "academique", "star": true, "type": "academique",
+      "id": "eyeguard", "group": "academique", "star": false, "type": "academique",
       "role": "Co-developer — AI, embedded systems &amp; mobile app",
       "org": "EyeGuard — semester academic project", "place": "HEI/JUNIA",
       "dates": "2023", "verified": true,
@@ -364,8 +364,9 @@
         "Private AKS",
         "Azure SQL"
       ],
-      "caption": "Private networking ? Container orchestration",
-      "stage": "Industry internship ? Proof of concept",
+      "caption": "Private networking · Container orchestration",
+      "stage": "Internship · Proof of concept",
+      "highlight": "Three private Azure networks. Containerised IoT APIs. An architecture tested and costed.",
       "subtitle": "Private infrastructure for IoT services",
       "challenge": "Assess whether existing IoT APIs could run securely on Azure Kubernetes Service within a private network.",
       "contribution": "Designed a three-VNet architecture, containerised .NET APIs and resolved connectivity and CPU architecture issues.",
@@ -380,8 +381,9 @@
         "Functions",
         "Services"
       ],
-      "caption": "Authentication ? Inference ? Subscription billing",
-      "stage": "Independent product ? SaaS",
+      "caption": "Authentication · Inference · Billing",
+      "stage": "Independent SaaS",
+      "highlight": "The whole application: AI inference, accounts, usage limits and subscription billing.",
       "subtitle": "Beyond an AI model: a complete application",
       "challenge": "Build the account, usage and billing flows around a text classification model.",
       "contribution": "Connected React, Netlify Functions, Supabase and Stripe; implemented inference and model-downtime handling.",
@@ -397,7 +399,8 @@
         "Edited PDF"
       ],
       "caption": "Document processing stays in the browser",
-      "stage": "Independent product ? Browser-based tool",
+      "stage": "Independent product",
+      "highlight": "PDF editing and local OCR. Three languages. Documents stay in the browser.",
       "subtitle": "Useful document tools, without file uploads",
       "challenge": "Let people edit and process PDFs without sending their documents to an application server.",
       "contribution": "Combined PDF.js, PDF-Lib, Fabric.js and local OCR into one responsive editing environment.",
@@ -406,10 +409,7 @@
   ],
   "featured_repos": [
     "Time-Tracker",
-    "goeditpdf-public",
     "LexiNegotiate-",
-    "bayesian-soh-batteries",
-    "smart-waste-detector-yolo",
-    "cv-pdf-studio"
+    "bayesian-soh-batteries"
   ]
 }

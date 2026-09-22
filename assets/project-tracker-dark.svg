@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="200" viewBox="0 0 560 200" role="img" aria-labelledby="title">
+      <title id="title">Local Time Tracker: activity to local SQLite to offline report</title><style>
+      text{font-family:Arial,Helvetica,sans-serif;fill:#edf0e7}
+      .muted{fill:#b0bcb0}.accent{fill:#f39b76}.line{stroke:#364339;fill:none}
+      .panel{fill:#202c25;stroke:#364339}.paper{fill:#141c19;stroke:#364339}
+      .flow{fill:none;stroke:#f39b76;stroke-width:2;stroke-dasharray:6 14;animation:flow 4s linear infinite}
+      .float{animation:float 6s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+      .late{animation-delay:-3s}.orbit{animation:orbit 30s linear infinite;transform-origin:970px 165px}
+      .bar{transform-box:fill-box;transform-origin:bottom;animation:bar 4s ease-in-out infinite}
+      .scan{animation:scan 5s ease-in-out infinite}.breathe{animation:breathe 5s ease-in-out infinite}
+      @keyframes flow{to{stroke-dashoffset:-80}}
+      @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+      @keyframes orbit{to{transform:rotate(360deg)}}
+      @keyframes bar{0%,100%{transform:scaleY(.55)}50%{transform:scaleY(1)}}
+      @keyframes scan{0%,100%{transform:translateY(0);opacity:.45}50%{transform:translateY(44px);opacity:1}}
+      @keyframes breathe{0%,100%{opacity:.45}50%{opacity:1}}
+      @media(prefers-reduced-motion:reduce){*{animation:none!important}}
+      
+    </style>
+      <rect width="560" height="200" rx="12" fill="#141c19"/>
+        <path class="flow" d="M170 89H231M331 89H390"/>
+        <rect class="paper" x="36" y="36" width="135" height="107" rx="8"/>
+        <g fill="#f39b76"><rect class="bar" x="59" y="77" width="15" height="39" rx="3"/>
+        <rect class="bar late" x="85" y="59" width="15" height="57" rx="3"/><rect class="bar" style="animation-delay:-1s" x="111" y="69" width="15" height="47" rx="3"/></g>
+        <rect class="panel" x="231" y="47" width="100" height="81" rx="8"/>
+        <ellipse cx="281" cy="64" rx="27" ry="9" fill="none" stroke="#b0bcb0"/>
+        <path d="M254 64v39c0 12 54 12 54 0V64m-54 20c0 12 54 12 54 0" fill="none" stroke="#b0bcb0"/>
+        <g class="float"><rect class="paper" x="390" y="36" width="132" height="107" rx="8"/>
+        <path d="M411 65h70m-70 18h90m-90 18h52" stroke="#364339" stroke-width="5" stroke-linecap="round"/>
+        <path d="M490 109l7 7 14-17" stroke="#f39b76" stroke-width="3" fill="none"/></g>
+        <g font-size="11" class="muted" text-anchor="middle"><text x="103" y="170">ACTIVITY</text><text x="281" y="170">LOCAL SQLITE</text><text x="455" y="170">OFFLINE REPORT</text></g></svg>

@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="200" viewBox="0 0 560 200" role="img" aria-labelledby="title">
+      <title id="title">Influence Persona: avatar, generation and video workflow</title><style>
+      text{font-family:Arial,Helvetica,sans-serif;fill:#edf0e7}
+      .muted{fill:#b0bcb0}.accent{fill:#f39b76}.line{stroke:#364339;fill:none}
+      .panel{fill:#202c25;stroke:#364339}.paper{fill:#141c19;stroke:#364339}
+      .flow{fill:none;stroke:#f39b76;stroke-width:2;stroke-dasharray:6 14;animation:flow 4s linear infinite}
+      .float{animation:float 6s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+      .late{animation-delay:-3s}.orbit{animation:orbit 30s linear infinite;transform-origin:970px 165px}
+      .bar{transform-box:fill-box;transform-origin:bottom;animation:bar 4s ease-in-out infinite}
+      .scan{animation:scan 5s ease-in-out infinite}.breathe{animation:breathe 5s ease-in-out infinite}
+      @keyframes flow{to{stroke-dashoffset:-80}}
+      @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+      @keyframes orbit{to{transform:rotate(360deg)}}
+      @keyframes bar{0%,100%{transform:scaleY(.55)}50%{transform:scaleY(1)}}
+      @keyframes scan{0%,100%{transform:translateY(0);opacity:.45}50%{transform:translateY(44px);opacity:1}}
+      @keyframes breathe{0%,100%{opacity:.45}50%{opacity:1}}
+      @media(prefers-reduced-motion:reduce){*{animation:none!important}}
+      *{animation:none!important}
+    </style>
+      <rect width="560" height="200" rx="12" fill="#141c19"/>
+        <path class="flow" d="M167 92H240M320 92H398"/>
+        <g class="float"><rect class="paper" x="47" y="41" width="119" height="107" rx="10"/><circle cx="107" cy="80" r="16" fill="none" stroke="#b0bcb0" stroke-width="2"/>
+        <path d="M77 129v-8a30 25 0 0 1 60 0v8" stroke="#b0bcb0" stroke-width="2" fill="none"/></g>
+        <rect class="panel" x="240" y="56" width="80" height="76" rx="12"/>
+        <path class="breathe" d="M280 71l6 17 17 6-17 6-6 17-6-17-17-6 17-6z" fill="#f39b76"/>
+        <g class="float late"><rect class="paper" x="398" y="41" width="119" height="107" rx="10"/><path d="M445 72l31 21-31 21z" fill="none" stroke="#f39b76" stroke-width="2.5"/></g>
+        <g text-anchor="middle" font-size="11" class="muted"><text x="106" y="178">AVATAR</text><text x="280" y="178">GENERATE</text><text x="457" y="178">VIDEO</text></g></svg>

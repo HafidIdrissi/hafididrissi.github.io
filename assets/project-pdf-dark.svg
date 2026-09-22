@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="200" viewBox="0 0 560 200" role="img" aria-labelledby="title">
+      <title id="title">GoEditPDF: local document editing and OCR</title><style>
+      text{font-family:Arial,Helvetica,sans-serif;fill:#edf0e7}
+      .muted{fill:#b0bcb0}.accent{fill:#f39b76}.line{stroke:#364339;fill:none}
+      .panel{fill:#202c25;stroke:#364339}.paper{fill:#141c19;stroke:#364339}
+      .flow{fill:none;stroke:#f39b76;stroke-width:2;stroke-dasharray:6 14;animation:flow 4s linear infinite}
+      .float{animation:float 6s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+      .late{animation-delay:-3s}.orbit{animation:orbit 30s linear infinite;transform-origin:970px 165px}
+      .bar{transform-box:fill-box;transform-origin:bottom;animation:bar 4s ease-in-out infinite}
+      .scan{animation:scan 5s ease-in-out infinite}.breathe{animation:breathe 5s ease-in-out infinite}
+      @keyframes flow{to{stroke-dashoffset:-80}}
+      @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+      @keyframes orbit{to{transform:rotate(360deg)}}
+      @keyframes bar{0%,100%{transform:scaleY(.55)}50%{transform:scaleY(1)}}
+      @keyframes scan{0%,100%{transform:translateY(0);opacity:.45}50%{transform:translateY(44px);opacity:1}}
+      @keyframes breathe{0%,100%{opacity:.45}50%{opacity:1}}
+      @media(prefers-reduced-motion:reduce){*{animation:none!important}}
+      
+    </style>
+      <rect width="560" height="200" rx="12" fill="#141c19"/>
+        <rect class="panel" x="98" y="26" width="362" height="137" rx="12"/>
+        <g class="float late"><rect class="paper" x="145" y="43" width="80" height="103" rx="5"/><path d="M162 70h44m-44 14h35m-35 14h44" stroke="#364339" stroke-width="4"/></g>
+        <g class="float"><rect class="paper" x="242" y="37" width="80" height="103" rx="5"/><path d="M259 64h44m-44 14h35m-35 14h44" stroke="#364339" stroke-width="4"/>
+        <path class="scan" d="M250 59h64" stroke="#f39b76" stroke-width="3"/></g>
+        <g class="float late"><rect class="paper" x="339" y="43" width="80" height="103" rx="5"/><path d="M356 70h44m-44 14h35" stroke="#364339" stroke-width="4"/><path d="M357 115l12 10 26-30" fill="none" stroke="#f39b76" stroke-width="3"/></g>
+        <text x="280" y="185" text-anchor="middle" font-size="11" class="muted">YOUR DOCUMENTS. YOUR BROWSER.</text></svg>

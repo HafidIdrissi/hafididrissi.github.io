@@ -1,0 +1,85 @@
+/* Motion is a progressive enhancement; content never depends on an entrance animation. */
+.header-inner{gap:16px}
+.nav{margin-right:12px}
+.motion-toggle{width:38px;height:38px;border:1px solid var(--line);border-radius:50%;display:grid;place-items:center;background:transparent;color:var(--muted);cursor:pointer;flex-shrink:0}
+.motion-toggle:hover{color:var(--accent);background:var(--soft)}
+.motion-toggle:disabled{cursor:default;opacity:.55}
+.motion-toggle svg{width:13px;height:13px}
+.play-icon{display:none}
+[data-motion=paused] .play-icon{display:block}
+[data-motion=paused] .pause-icon{display:none}
+.reading-progress{position:fixed;z-index:25;top:0;left:0;right:0;height:2px;background:var(--accent);transform:scaleX(var(--progress,0));transform-origin:left;pointer-events:none}
+.hero{padding-block:68px 58px}
+.hero h1 .hero-line{display:block;color:var(--text)}
+.hero h1 .hero-line.accent{color:var(--accent)}
+.hero-intro{max-width:45ch}
+.hero-line{animation:hero-arrive .85s cubic-bezier(.2,.7,.3,1) both}
+.hero-line:nth-child(2){animation-delay:.1s}
+.hero-line:nth-child(3){animation-delay:.2s}
+.hero-copy>.eyebrow,.hero-intro,.actions,.availability{animation:hero-arrive .8s .25s both}
+.system-card{position:relative;isolation:isolate;transform:perspective(1000px) rotateX(var(--tilt-x,0deg)) rotateY(var(--tilt-y,0deg));transition:transform .3s ease,box-shadow .3s ease;animation:card-arrive .9s .15s both}
+.system-card::before{content:'';position:absolute;z-index:-1;inset:0;border-radius:50%;background:radial-gradient(ellipse,color-mix(in srgb,var(--green) 10%,transparent),transparent 67%);animation:ambient 8s ease-in-out infinite;pointer-events:none}
+.system-layer{animation:layer-signal 6s ease-in-out infinite}
+.layer-accent{animation-delay:1.2s}
+.system-connector{position:relative}
+.system-connector::after{content:'';position:absolute;left:-3px;top:0;width:5px;height:5px;border-radius:50%;background:var(--accent);animation:vertical-signal 2.4s linear infinite}
+.system-connector:nth-of-type(4)::after{animation-delay:1.2s}
+.service-row>div{animation:service-signal 6s 2.4s ease-in-out infinite}
+.service-row>div:nth-child(2){animation-delay:2.7s}
+.service-row>div:nth-child(3){animation-delay:3s}
+.system-footer span,.button span,.text-link span{transition:transform .25s ease}
+.system-footer:hover span,.text-link:hover span{transform:translate(3px,-3px)}
+.button:hover span{transform:translateY(2px)}
+.status-dot{box-shadow:0 0 0 0 transparent;animation:status-ring 4s ease-out infinite}
+.section{padding-top:70px}
+.work-card{transition:transform .3s ease,box-shadow .3s ease,border-color .3s ease}
+.work-card:hover,.work-card:focus-within{transform:translateY(-5px);border-color:var(--accent);box-shadow:0 15px 35px -24px var(--muted)}
+.work-visual{position:relative;overflow:hidden;background-image:radial-gradient(var(--line) .8px,transparent .8px);background-size:13px 13px}
+.diagram-flow{position:relative;isolation:isolate}
+.diagram-node{position:relative;z-index:1;animation:node-signal 6s infinite ease-in-out}
+.diagram-node:nth-of-type(3){animation-delay:1s}
+.diagram-node:nth-of-type(5){animation-delay:2s}
+.diagram-arrow{animation:arrow-flow 2.4s infinite ease-in-out}
+.diagram-arrow:nth-of-type(4){animation-delay:1.2s}
+.work-subtitle{font-size:13px;line-height:1.8;margin-bottom:18px;min-height:70px}
+.case-study{margin-bottom:22px;font-size:12px}
+.case-study summary{display:flex;justify-content:space-between;align-items:center;gap:20px;list-style:none;cursor:pointer;color:var(--muted);padding:9px 0;border-top:1px solid var(--line)}
+.case-study summary::-webkit-details-marker{display:none}
+.case-study summary span{font-size:20px;color:var(--accent);transition:transform .2s}
+.case-study[open] summary span{transform:rotate(45deg)}
+.case-study summary:hover{color:var(--accent)}
+.case-study dl{padding-top:7px;margin-bottom:0}
+.mini-wave{display:flex;align-items:center;gap:4px;width:39px;height:36px;flex-shrink:0}
+.mini-wave i{height:25px;width:4px;background:var(--accent);border-radius:3px;animation:wave 2s infinite ease-in-out}
+.mini-wave i:nth-child(2){animation-delay:-.4s;height:36px}
+.mini-wave i:nth-child(3){animation-delay:-.8s;height:18px}
+.mini-wave i:nth-child(4){animation-delay:-1.2s;height:29px}
+.mini-wave i:nth-child(5){animation-delay:-1.6s;height:20px}
+.skills-grid span{display:none}
+.skills-grid article{padding-block:20px}
+.repo{transition:transform .25s,border-color .25s,background .25s}
+.repo:hover{transform:translateY(-4px)}
+.contact{padding-block:65px}
+.contact-actions .button{position:relative;overflow:hidden}
+.contact-actions .button::before{content:'';position:absolute;inset:0;background:linear-gradient(105deg,transparent 40%,#ffffff15 50%,transparent 60%);transform:translateX(-100%);animation:button-sheen 7s 2s infinite ease-in-out;pointer-events:none}
+@keyframes hero-arrive{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+@keyframes card-arrive{from{opacity:0;translate:0 25px}to{opacity:1;translate:0 0}}
+@keyframes ambient{50%{transform:scale(1.06) translateY(-10px);opacity:.6}}
+@keyframes layer-signal{0%,65%,100%{box-shadow:0 0 0 0 transparent}20%,35%{box-shadow:0 0 0 3px color-mix(in srgb,var(--green) 13%,transparent)}}
+@keyframes vertical-signal{0%{transform:translateY(0);opacity:0}12%,80%{opacity:1}100%{transform:translateY(34px);opacity:0}}
+@keyframes service-signal{0%,55%,100%{transform:translateY(0)}25%{transform:translateY(-3px);border-color:var(--green)}}
+@keyframes status-ring{0%{box-shadow:0 0 0 0 color-mix(in srgb,var(--green) 25%,transparent)}55%,100%{box-shadow:0 0 0 7px transparent}}
+@keyframes node-signal{0%,60%,100%{border-color:var(--line)}20%,35%{border-color:var(--accent);transform:translateY(-3px)}}
+@keyframes arrow-flow{0%,100%{opacity:.4;transform:translateX(-2px)}50%{opacity:1;transform:translateX(2px);color:var(--accent)}}
+@keyframes wave{0%,100%{transform:scaleY(.5)}50%{transform:scaleY(1)}}
+@keyframes button-sheen{0%,60%{transform:translateX(-100%)}85%,100%{transform:translateX(100%)}}
+@media(max-width:800px){.hero{padding-block:48px}.section{padding-top:55px}.system-card{max-width:460px}.work-subtitle{min-height:0}.work-visual{min-height:180px}}
+@media(max-width:520px){.header-inner{gap:8px}.nav{gap:12px;margin-right:0}.motion-toggle,.theme-toggle{width:30px;height:30px}.brand-role{display:none}.brand{gap:7px}.brand>span:last-child{max-width:58px;line-height:1.35}.hero{padding-block:38px;gap:32px}.hero h1{margin-block:20px}.hero-intro{font-size:15px}.case-study{margin-bottom:14px}.work-subtitle{min-height:0}.mini-wave{width:35px}.contact{padding-block:48px}.contact h2{font-size:32px}.section-heading h2{font-size:29px}}
+@media(max-width:359px){.brand>span:last-child{display:none}.nav{gap:15px}.header-inner{gap:12px}}
+/* A saved pause takes effect before first paint; all information remains visible. */
+:root[data-motion=paused]{scroll-behavior:auto}
+[data-motion=paused] *,[data-motion=paused] *::before,[data-motion=paused] *::after{animation:none!important;transition:none!important}
+[data-motion=paused] .system-card{transform:none}
+[data-suspended=true] *,[data-suspended=true] *::before,[data-suspended=true] *::after{animation-play-state:paused!important}
+@media(prefers-reduced-motion:reduce){.system-card{transform:none!important}.reading-progress{display:none}*,*::before,*::after{animation:none!important;transition:none!important}}
+@media print{.motion-toggle,.reading-progress{display:none!important}*,*::before,*::after{animation:none!important;transition:none!important}.case-study::details-content{content-visibility:visible!important;display:block!important}.work-subtitle{min-height:0}}
