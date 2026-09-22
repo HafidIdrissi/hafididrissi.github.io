@@ -343,15 +343,73 @@
     }
   ],
   "repos": [
-    {"n": "Time-Tracker", "d": "Automatic, local Windows time tracker: applications and browser tabs in a SQLite database, with no account and no telemetry. Signed installer, MIT licence.", "l": "Python", "lc": "#3572A5", "s": 2, "live": "Release"},
+    {"n": "Time-Tracker", "d": "Automatic Windows activity tracking with local SQLite storage and offline reports. Python, tests in CI and downloadable releases.", "l": "Python", "lc": "#3572A5", "s": 2, "live": "Release"},
     {"n": "goeditpdf-public", "d": "Privacy-first PDF editor: merge, annotate, sign, watermark and local OCR, entirely in the browser.", "l": "HTML", "lc": "#e34c26", "s": 1, "live": "goeditpdf.com"},
-    {"n": "LexiNegotiate-", "d": "Gemini-assisted contract analysis prototype: risk score, clause comparison and negotiation scripts.", "l": "TypeScript", "lc": "#3178c6", "s": 2, "live": "Video demo"},
-    {"n": "bayesian-soh-batteries", "d": "Hierarchical Bayesian inference for predicting the state of health of Li-ion batteries, with PyMC and NumPyro.", "l": "Python", "lc": "#3572A5", "s": 0, "live": ""},
+    {"n": "LexiNegotiate-", "d": "Gemini-assisted contract analysis: structured output, clause comparison and negotiation scripts. Hackathon prototype with simulated demo statistics.", "l": "TypeScript", "lc": "#3178c6", "s": 2, "live": "Video demo"},
+    {"n": "bayesian-soh-batteries", "d": "Battery health inference with PyMC and NumPyro. Compares per-battery and hierarchical models on simulated data; not validated on real cells.", "l": "Python", "lc": "#3572A5", "s": 0, "live": ""},
     {"n": "smart-waste-detector-yolo", "d": "Six-category waste detection through Ultralytics YOLO transfer learning — mAP50 of 0.496 after 30 epochs.", "l": "Jupyter Notebook", "lc": "#DA5B0B", "s": 0, "live": ""},
     {"n": "cv-pdf-studio", "d": "Agent skill generating CV and cover letter PDFs from verified evidence, with provenance and ATS-readability checks.", "l": "Python", "lc": "#3572A5", "s": 0, "live": ""},
     {"n": "humanizer", "d": "Claude Code skill that strips AI writing patterns and rewrites text in a human voice — English and French.", "l": "Markdown", "lc": "#6a7484", "s": 1, "live": ""},
     {"n": "Devis-Chantier-AI", "d": "MVP preparing construction quotes from a description of the work or a site photograph, assisted by Gemini.", "l": "JavaScript", "lc": "#f1e05a", "s": 0, "live": "Demo"},
     {"n": "expense-tracker", "d": "Next.js expense tracker with a flexible daily budget and local persistence, no backend.", "l": "TypeScript", "lc": "#3178c6", "s": 3, "live": "Demo"},
     {"n": "hafididrissi.github.io", "d": "This site — a static portfolio with no external dependency beyond web fonts.", "l": "HTML", "lc": "#e34c26", "s": 1, "live": "Live"}
+  ],
+  "selected_work": [
+    {
+      "experience": "hager",
+      "number": "01",
+      "discipline": "Cloud architecture",
+      "flow": [
+        "IoT APIs",
+        "Private AKS",
+        "Azure SQL"
+      ],
+      "caption": "Private networking ? Container orchestration",
+      "stage": "Industry internship ? Proof of concept",
+      "subtitle": "Private infrastructure for IoT services",
+      "challenge": "Assess whether existing IoT APIs could run securely on Azure Kubernetes Service within a private network.",
+      "contribution": "Designed a three-VNet architecture, containerised .NET APIs and resolved connectivity and CPU architecture issues.",
+      "result": "A working proof of concept, validation testing and a monthly cost estimate with explicit assumptions."
+    },
+    {
+      "experience": "checkai",
+      "number": "02",
+      "discipline": "Full-stack product",
+      "flow": [
+        "React",
+        "Functions",
+        "Services"
+      ],
+      "caption": "Authentication ? Inference ? Subscription billing",
+      "stage": "Independent product ? SaaS",
+      "subtitle": "Beyond an AI model: a complete application",
+      "challenge": "Build the account, usage and billing flows around a text classification model.",
+      "contribution": "Connected React, Netlify Functions, Supabase and Stripe; implemented inference and model-downtime handling.",
+      "result": "An application covering analysis entitlements, saved results and subscription webhooks, with build validation in CI."
+    },
+    {
+      "experience": "goeditpdf",
+      "number": "03",
+      "discipline": "Privacy by design",
+      "flow": [
+        "Your PDF",
+        "Browser",
+        "Edited PDF"
+      ],
+      "caption": "Document processing stays in the browser",
+      "stage": "Independent product ? Browser-based tool",
+      "subtitle": "Useful document tools, without file uploads",
+      "challenge": "Let people edit and process PDFs without sending their documents to an application server.",
+      "contribution": "Combined PDF.js, PDF-Lib, Fabric.js and local OCR into one responsive editing environment.",
+      "result": "Merge, annotation, signing and OCR workflows, with an interface in English, French and Spanish."
+    }
+  ],
+  "featured_repos": [
+    "Time-Tracker",
+    "goeditpdf-public",
+    "LexiNegotiate-",
+    "bayesian-soh-batteries",
+    "smart-waste-detector-yolo",
+    "cv-pdf-studio"
   ]
 }
